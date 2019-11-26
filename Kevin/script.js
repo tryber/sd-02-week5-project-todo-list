@@ -35,6 +35,15 @@ function toggleDone(key) {
   }
 }
 
+function deleteTodo(key) {
+  todoItems = todoItems.filter(item => item.id !== Number(key));
+  const item = document.querySelector(`[data-key='${key}']`);
+  item.remove();
+  
+  const list = document.querySelector('.js-todo-list');
+  if (todoItems.length === 0) list.innerHTML = '';
+}
+
 const form = document.querySelector('.js-form');
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -54,5 +63,11 @@ list.addEventListener('click', event => {
     const itemKey = event.target.parentElement.dataset.key;
     toggleDone(itemKey);
   }
+  
+  if (event.target.classList.contains('js-delete-todo')) {
+    const itemKey = event.target.parentElement.dataset.key;
+    deleteTodo(itemKey);
+  }
+
 });
 }
