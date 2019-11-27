@@ -1,5 +1,5 @@
-/*global window .*/
-/*global document .*/
+/*global window.*/
+/*global document.*/
 
 function adicionar() {
   const text = document.getElementById('input_tarefas').value;
@@ -9,7 +9,7 @@ function adicionar() {
   addTarefas.appendChild(textNode);
   document.getElementById('ol_lista_tarefas').appendChild(addTarefas);
   document.getElementById('input_tarefas').value = '';
-};
+}
 
 function tarefaCompleta(event) {
   const listaTexto = event.target;
@@ -18,26 +18,26 @@ function tarefaCompleta(event) {
   } else {
     listaTexto.style.textDecoration = 'line-through';
   }
-};
+}
 
 function removerTarefasCompletas() {
   const listaTarefas = document.getElementById('ol_lista_tarefas');
   const tamanhoLista = document.querySelectorAll('#ol_lista_tarefas li').length;
-  for (let i = tamanhoLista-1; i >= 0; i --) {
+  for (let i = tamanhoLista - 1; i >= 0; i -= 1) {
     const listaTexto = listaTarefas.childNodes[i].style.textDecoration;
     if (listaTexto === 'line-through') {
-      listaTarefas.removeChild(listaTarefas.childNodes[i]);   
+      listaTarefas.removeChild(listaTarefas.childNodes[i]);
     }
   }
-};
+}
 
 function apagarLista() {
   const listaTarefas = document.getElementById('ol_lista_tarefas');
   const tamanhoLista = document.querySelectorAll('#ol_lista_tarefas li').length;
-  for (let i = 0; i < tamanhoLista; i ++) {
+  for (let i = 0; i < tamanhoLista; i += 1) {
     listaTarefas.removeChild(listaTarefas.childNodes[0]);
   }
-};
+}
 
 window.onload = function start() {
   const buttonAdd = document.getElementById('button_tarefas');
