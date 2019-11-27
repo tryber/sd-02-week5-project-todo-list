@@ -6,26 +6,21 @@
     box-sizing: border-box;
 }
 
-
 #caixa-imagem{
     border: 2px solid black;
     width: 600px;
     height: 500px;
     position: relative;
-    background: black;
 }
 
 #meme-imagem{
     width: 100%;
     height: 100%;
-    
-
 }
 
 #recebe-meme{
     position: absolute;
-    bottom: 0px;
-    border: solid red 1px;
     width: 100%;
     height: 150px;
 }
+
