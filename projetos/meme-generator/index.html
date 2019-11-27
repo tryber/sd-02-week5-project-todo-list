@@ -9,50 +9,70 @@
     
 </head>
 <body>
-
-    <h1>Gerador de Memes</h1>
-
-    <form action="">
-        <p>Selecione a sua imagem a partir do seu computador </p>
-        <input type="file" id="escolher-imagem">
-        
-        <div id="caixa-escolha-cores">
-
-            <p>Escolha a cor da fonte</p>
-
-            <select id="cores">
-                <option value="#000000" disabled selected>Selecione a cor</option>
-                <option value="#FFFF00">Amarela</option>
-                <option value="#fff">Branca</option>
-                <option value="#708090">Cinza</option>
-                <option value="#000000">Preta</option>
-                <option value="#6A5ACD">Roxa</option>
-                <option value="#008000">Verde</option>
-                <option value="#FF0000">Vermelho</option>
-            </select>
+        <div id="titulo">
+            <h1>Gerador de Memes</h1>
         </div>
-
-        <div id="caixa-escolha-posicao">
-
-                <p>Escolha a posição da frase</p>
     
-                <select id="posicao">
+
+        <div id="caixa-principal"> <!-- Início da caixa principal -->
+            <div id="caixa-escolher-imagem" class="caixas">
+                <form action="">
+                    <h3>Selecione a sua imagem a partir do seu computador </h3>
+                    <input type="file" id="escolher-imagem" class="caixas-input-select">
+                </form>
+            </div>
+        
+            
+            <div id="caixa-escolha-cores" class="caixas">
+    
+                <h3>Escolha a cor da fonte</h3>
+    
+                <select id="cores" class="caixas-input-select">
+                    <option value="#000000" disabled selected>Selecione a cor</option>
+                    <option value="#FFFF00">Amarela</option>
+                    <option value="#fff">Branca</option>
+                    <option value="#708090">Cinza</option>
+                    <option value="#000000">Preta</option>
+                    <option value="#6A5ACD">Roxa</option>
+                    <option value="#008000">Verde</option>
+                    <option value="#FF0000">Vermelho</option>
+                </select>
+            </div>
+    
+            <div id="caixa-escolha-posicao" class="caixas">
+    
+                <h3>Escolha a posição da frase</h3>
+    
+                <select id="posicao" class="caixas-input-select">
                     <option value="" disabled selected>Selecione a posição</option>
                     <option value="0px">Parte superior</option>
                     <option value="190px">Central</option>
                     <option value="350px">Parte inferior</option>
                 </select>
             </div>
+    
+            <div id="caixa-escreve-meme" class="caixas">
+                <h3>Escreva aqui a sua mensagem Meme para deixa na imagem</h3>
+    
+                <form>
+                    <input type="text" id="escreve-meme" class="caixas-input-select">
+                </form>
+            </div>
+        </div><!-- Fim da caixa principal -->
 
-        <p>Escreva aqui a sua mensagem Meme para deixa na imagem</p>
+        
+        
+        <div id="caixa-conteudo">
+            <div id="caixa-imagem">
+                <img src="" alt="" id="meme-imagem">
+                <p id="recebe-meme"></p>
+            </div>
+        </div>
 
-        <input type="text" id="escreve-meme">
-    </form>
-
-    <div id="caixa-imagem">
-        <img src="" alt="" id="meme-imagem">
-        <p id="recebe-meme"></p>
-    </div>
+        <footer>
+             Copyright &copy; 2019 Fernando Luckesi
+        </footer>
+        
 
     <script src="script.js"></script>
     
