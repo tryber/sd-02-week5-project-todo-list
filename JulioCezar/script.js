@@ -1,5 +1,5 @@
-/*global window.*/
-/*global document.*/
+/*global window . */
+/*global document . */
 
 function adicionar() {
   const text = document.getElementById('input_tarefas').value;
