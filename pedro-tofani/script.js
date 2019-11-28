@@ -30,7 +30,16 @@ function selecionarItemLista() {
     }
 }
 
-    function riscar() {
-        if (this.style.textDecoration == 'line-through') this.style.textDecoration = '';
-        else this.style.textDecoration = 'line-through'
+function riscar() {
+    if (this.style.textDecoration == 'line-through') this.style.textDecoration = '';
+    else this.style.textDecoration = 'line-through'
+}
+
+let ponteiroBotaoRemoverSelecionado = document.getElementById('removerSelecionado');
+ponteiroBotaoRemoverSelecionado.addEventListener('click', removerSelecionado);
+function removerSelecionado() {
+    let ponteiroItemLista = document.getElementsByClassName('itemLista');
+    for (let i = 0; i < ponteiroItemLista.length; i++) {
+        if (ponteiroItemLista[i].style.color == 'red') ponteiroOL.removeChild(ponteiroItemLista[i]);
     }
+}
