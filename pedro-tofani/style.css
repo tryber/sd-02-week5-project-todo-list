@@ -10,7 +10,7 @@ section {
     border-radius: 20px;
 }
 
-.todosBotoes{
+.todosBotoes {
     margin: 10px;
     cursor: pointer;
     border-radius: 20px;
@@ -18,4 +18,8 @@ section {
 
 li:hover {
     background-color: green;
+}
+
+.itemLista {
+    text-align: left;
 }
