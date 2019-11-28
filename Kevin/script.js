@@ -48,14 +48,33 @@ const form = document.querySelector('.js-form');
 form.addEventListener('submit', event => {
   event.preventDefault();
   const input = document.querySelector('.js-todo-input');
-
+  
   const text = input.value.trim();
-  if (text !== '') {
+  if (text === '') {
+    alert("You must write something!");
+  }
+  else if (text !== '') {
     addTodo(text);
     input.value = '';
     input.focus();
   }
 });
+
+const addBtn = document.querySelector('.addBtn');
+addBtn.addEventListener('click', event => {
+  event.preventDefault();
+  const input = document.querySelector('.js-todo-input');
+  
+  const text = input.value.trim();
+  if (text === '') {
+    alert("You must write something!");
+  }
+  else if (text !== '') {
+    addTodo(text);
+    input.value = '';
+    input.focus();
+}}
+)
 
 const list = document.querySelector('.js-todo-list');
 list.addEventListener('click', event => {
