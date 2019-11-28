@@ -12,7 +12,13 @@
     <main>
         <div class="container">
             <h1 class="app-title">To Do List</h1>
-            <ul class="todo-list js-todo-list"></ul>
+            <p>Click inside the box to check and uncheck</p>
+            <form class="js-form">
+                <input autofocus type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app"
+                    class="js-todo-input">
+                <span onclick="newElement()" class="addBtn">Add</span>
+            </form>
+            <ol class="todo-list js-todo-list"></ol>
             <div class="empty-state">
                 <svg class="checklist-icon">
                     <use href="#checklist-icon"></use>
@@ -20,10 +26,7 @@
                 <h2 class="empty-state__title">Add your first todo</h2>
                 <p class="empty-state__description">What do you want to get done today?</p>
             </div>
-            <form class="js-form">
-                <input autofocus type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app"
-                    class="js-todo-input">
-            </form>
+           
         </div>
     </main>
     
