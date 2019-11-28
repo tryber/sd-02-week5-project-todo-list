@@ -45,7 +45,7 @@ function removerSelecionado() {
 
 let ponteiroBotaoLimparCompletos = document.getElementById('limparCompletos');
 ponteiroBotaoLimparCompletos.addEventListener('click', removerCompletos);
-function removerCompletos(){
+function removerCompletos() {
     for (let i = 0; i < ponteiroItemLista.length; i++) {
         if (ponteiroItemLista[i].style.textDecoration == 'line-through') ponteiroOL.removeChild(ponteiroItemLista[i]);
     }
@@ -53,9 +53,36 @@ function removerCompletos(){
 
 let ponteiroBotaolimparTudo = document.getElementById('limparTudo');
 ponteiroBotaolimparTudo.addEventListener('click', removerTudo);
-function removerTudo(){
+function removerTudo() {
     let loops = ponteiroItemLista.length
     for (let i = 0; i < loops; i++) {
         ponteiroOL.removeChild(ponteiroItemLista[0]);
     }
 }
+
+let ponteiroBotaoSalvar = document.getElementById('salvar');
+ponteiroBotaoSalvar.addEventListener('click', salvar);
+function salvar() {
+    localStorage.clear();
+    for (let i = 0; i < ponteiroItemLista.length; i++) {
+        localStorage.setItem(i, ponteiroItemLista[i].innerHTML + ' ' + ponteiroItemLista[i].style.textDecoration)
+    }
+}
+
+window.onload = function () {
+    removerTudo();
+    let ponteiroOL = document.getElementById('listaDeAfazeres');
+    let i = localStorage.length;
+    for (let j = 0; j < i; j++) {
+        let criarLi = document.createElement('li')
+        let novaString = localStorage.getItem(j)
+        let novoArranjo = novaString.split(' ')
+        criarLi.innerHTML = novoArranjo[0]
+        criarLi.style.textDecoration = novoArranjo[1]
+        criarLi.className = 'itemLista'
+        criarLi.addEventListener('click', selecionarItemLista)
+        criarLi.addEventListener('dblclick', riscar)
+        ponteiroOL.appendChild(criarLi);
+    }
+}
+

@@ -18,7 +18,7 @@ section {
 }
 
 li:hover {
-    background-color: green;
+    background-color:  rgb(200, 85, 85);
 }
 
 .todosBotoes:hover {
