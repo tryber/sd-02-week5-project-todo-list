@@ -17,14 +17,20 @@ function adicionarTarefa() {
 
 function selecionarItemLista() {
     let ponteiroItemLista = document.getElementsByClassName('itemLista');
-    for (let i = 0; i < ponteiroItemLista.length; i++){
-        ponteiroItemLista[i].style.color = 'black';
+    if (this.style.color == 'red') {
+        for (let i = 0; i < ponteiroItemLista.length; i++) {
+            ponteiroItemLista[i].style.color = 'black';
+        }
     }
-    if (this.style.color == 'red') { this.style.color = 'black' }
-    else { this.style.color = 'red' };
+    else {
+        for (let i = 0; i < ponteiroItemLista.length; i++) {
+            ponteiroItemLista[i].style.color = 'black';
+        }
+        this.style.color = 'red'
+    }
 }
 
-function riscar() {
-    if (this.style.textDecoration == 'line-through') this.style.textDecoration = '';
-    else this.style.textDecoration = 'line-through'
-}
+    function riscar() {
+        if (this.style.textDecoration == 'line-through') this.style.textDecoration = '';
+        else this.style.textDecoration = 'line-through'
+    }
