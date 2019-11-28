@@ -13,6 +13,7 @@ function adicionarTarefa() {
     criarLi.addEventListener('click', selecionarItemLista)
     criarLi.addEventListener('dblclick', riscar)
     ponteiroOL.appendChild(criarLi);
+    ponteiroConteudoDoInput.value = ''
 }
 
 function selecionarItemLista() {
@@ -47,5 +48,14 @@ ponteiroBotaoLimparCompletos.addEventListener('click', removerCompletos);
 function removerCompletos(){
     for (let i = 0; i < ponteiroItemLista.length; i++) {
         if (ponteiroItemLista[i].style.textDecoration == 'line-through') ponteiroOL.removeChild(ponteiroItemLista[i]);
+    }
+}
+
+let ponteiroBotaolimparTudo = document.getElementById('limparTudo');
+ponteiroBotaolimparTudo.addEventListener('click', removerTudo);
+function removerTudo(){
+    let loops = ponteiroItemLista.length
+    for (let i = 0; i < loops; i++) {
+        ponteiroOL.removeChild(ponteiroItemLista[0]);
     }
 }
