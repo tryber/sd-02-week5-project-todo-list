@@ -1,8 +1,6 @@
 
 let ponteiroItemLista = document.getElementsByClassName('itemLista');
 
-
-
 let ponteiroBotaoAdicionarTarefa = document.getElementById('adicionarTarefa');
 let ponteiroConteudoDoInput = document.getElementById('descricaoTarefa');
 let ponteiroOL = document.getElementById('listaDeAfazeres');
@@ -18,6 +16,10 @@ function adicionarTarefa() {
 }
 
 function selecionarItemLista() {
+    let ponteiroItemLista = document.getElementsByClassName('itemLista');
+    for (let i = 0; i < ponteiroItemLista.length; i++){
+        ponteiroItemLista[i].style.color = 'black';
+    }
     if (this.style.color == 'red') { this.style.color = 'black' }
     else { this.style.color = 'red' };
 }
