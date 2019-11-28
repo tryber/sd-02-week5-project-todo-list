@@ -14,10 +14,15 @@ section {
     margin: 10px;
     cursor: pointer;
     border-radius: 20px;
+    background-color: rgb(200, 85, 85);
 }
 
 li:hover {
     background-color: green;
+}
+
+.todosBotoes:hover {
+    background-color: rgb(220, 105, 105);
 }
 
 .itemLista {
