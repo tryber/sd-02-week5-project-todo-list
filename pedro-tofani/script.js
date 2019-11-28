@@ -16,7 +16,6 @@ function adicionarTarefa() {
 }
 
 function selecionarItemLista() {
-    let ponteiroItemLista = document.getElementsByClassName('itemLista');
     if (this.style.color == 'red') {
         for (let i = 0; i < ponteiroItemLista.length; i++) {
             ponteiroItemLista[i].style.color = 'black';
@@ -38,7 +37,6 @@ function riscar() {
 let ponteiroBotaoRemoverSelecionado = document.getElementById('removerSelecionado');
 ponteiroBotaoRemoverSelecionado.addEventListener('click', removerSelecionado);
 function removerSelecionado() {
-    let ponteiroItemLista = document.getElementsByClassName('itemLista');
     for (let i = 0; i < ponteiroItemLista.length; i++) {
         if (ponteiroItemLista[i].style.color == 'red') ponteiroOL.removeChild(ponteiroItemLista[i]);
     }
