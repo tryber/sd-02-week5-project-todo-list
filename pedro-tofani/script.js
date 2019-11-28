@@ -41,3 +41,11 @@ function removerSelecionado() {
         if (ponteiroItemLista[i].style.color == 'red') ponteiroOL.removeChild(ponteiroItemLista[i]);
     }
 }
+
+let ponteiroBotaoLimparCompletos = document.getElementById('limparCompletos');
+ponteiroBotaoLimparCompletos.addEventListener('click', removerCompletos);
+function removerCompletos(){
+    for (let i = 0; i < ponteiroItemLista.length; i++) {
+        if (ponteiroItemLista[i].style.textDecoration == 'line-through') ponteiroOL.removeChild(ponteiroItemLista[i]);
+    }
+}
