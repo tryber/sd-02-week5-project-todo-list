@@ -69,6 +69,15 @@ function salvar() {
     }
 }
 
+let ponteiroBotaoSubir = document.getElementById('subir');
+ponteiroBotaoSubir.addEventListener('click', subir);
+let ponteiroBotaoDescer = document.getElementById('descer');
+ponteiroBotaoDescer.addEventListener('click', descer);
+
+function subir(){
+    
+}
+
 window.onload = function () {
     removerTudo();
     let ponteiroOL = document.getElementById('listaDeAfazeres');
@@ -85,4 +94,3 @@ window.onload = function () {
         ponteiroOL.appendChild(criarLi);
     }
 }
-
