@@ -42,6 +42,7 @@ let botaoLimparLista = document.getElementById('limpar-lista');
 
 botaoLimparLista.addEventListener('click', function(){
     for(let i = 0; i < tarefas.length; i++){
-        listaOrdenada.removeChild(tarefas[i]);
+        console.log(tarefas[i].innerText)
+        /* listaOrdenada.removeChild(tarefas[i]); */
     }
 })
