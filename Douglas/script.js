@@ -6,8 +6,6 @@ const botoes = document.querySelectorAll('button');
 const apagaRealizado = document.getElementById('apagarCompletos');
 let apaga = document.querySelectorAll('.risca');
 
-
-
 // function removeTudo(pegaOl) {
 //     apagaTudo.addEventListener('click', function () {
 //     pegaOl.innerHTM = "";
@@ -15,14 +13,14 @@ let apaga = document.querySelectorAll('.risca');
 // }
 
 function risca(criaLi) {
-  criaLi.addEventListener('dblclick', function riscando() {
+  criaLi.addEventListener('dblclick', function() {
     criaLi.classList.toggle('risca');
     apaga = document.querySelectorAll('.risca');
   });
 }
 
 function marca(criaLi) {
-  criaLi.addEventListener('click', function marcando() {
+  criaLi.addEventListener('click', function() {
     criaLi.classList.toggle('destaca');
   });
 }
@@ -38,25 +36,25 @@ function adicionaLinha(argumento) {
 }
 
 function click() {
-  ok.addEventListener('click', function incluiLinha() {
+  ok.addEventListener('click', function() {
     adicionaLinha(entrada.value);
   });
 }
 
 function trocaMouse() {
   for (let i = 0; i < botoes.length; i += 1) {
-    botoes[i].addEventListener('mouseover', function passsarMouse() {
+    botoes[i].addEventListener('mouseover', function() {
       botoes[i].style.cursor = 'pointer';
       botoes[i].style.backgroundColor = 'cornsilk';
       });
-    botoes[i].addEventListener('mouseout', function mouseMao() {
+    botoes[i].addEventListener('mouseout', function() {
       botoes[i].style.backgroundColor = 'ButtonFace';
-      });
+    });
   }
 }
 
 function apagaRiscado() {
-  apagaRealizado.addEventListener('click', function apgaRiscado() {
+  apagaRealizado.addEventListener('click', function() {
     for (let i = 0; i < apaga.length; i += 1) {
       pegaOl.removeChild(apaga[i]);
     }

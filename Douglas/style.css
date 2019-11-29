@@ -1,6 +1,6 @@
 body {
   background-color: rgb( 158 , 231 , 84 );
-  font-family: 'Anton' , sans-serif;
+  font-family: 'Anton' , 'Arial' , sans-serif;
 }
 
 h1 {
@@ -44,5 +44,5 @@ input {
 button {
   margin: 3px 3px 3px 5px;
   padding: 10px 20px;
-  font-family: 'Anton' , sans-serif;
+  font-family: 'Anton' , 'Arial' , sans-serif;
 }
