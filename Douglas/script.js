@@ -2,16 +2,11 @@ const ok = document.getElementById('envia');
 const entrada = document.getElementById('entrada');
 const pegaOl = document.querySelector('ol');
 const botoes = document.querySelectorAll('button');
-const apagaTudo = document.getElementById('apagarTudo');
+// const apagaTudo = document.getElementById('apagarTudo');
 const apagaRealizado = document.getElementById('apagarCompletos');
 let apaga = document.querySelectorAll('.risca');
 
-window.onload = function inicia () {
-  click();
-  trocaMouse();
-  // removeTudo(pegaOl);
-  apagaRiscado();
-};
+
 
 // function removeTudo(pegaOl) {
 //     apagaTudo.addEventListener('click', function () {
@@ -28,8 +23,7 @@ function risca(criaLi) {
 
 function marca(criaLi) {
   criaLi.addEventListener('click', function marcando() {
-    const unico = document.querySelectorAll('destaca');
-    criaLi.classList.toggle("destaca");
+    criaLi.classList.toggle('destaca');
   });
 }
 
@@ -51,11 +45,11 @@ function click() {
 
 function trocaMouse() {
   for (let i = 0; i < botoes.length; i += 1) {
-      botoes[i].addEventListener('mouseover', function passsarMouse() {
+    botoes[i].addEventListener('mouseover', function passsarMouse() {
       botoes[i].style.cursor = 'pointer';
       botoes[i].style.backgroundColor = 'cornsilk';
       });
-      botoes[i].addEventListener('mouseout', function mouseMao() {
+    botoes[i].addEventListener('mouseout', function mouseMao() {
       botoes[i].style.backgroundColor = 'ButtonFace';
       });
   }
@@ -63,8 +57,15 @@ function trocaMouse() {
 
 function apagaRiscado() {
   apagaRealizado.addEventListener('click', function apgaRiscado() {
-    for (let i = 0; i< apaga.length; i += 1) {
+    for (let i = 0; i < apaga.length; i += 1) {
       pegaOl.removeChild(apaga[i]);
     }
   });
 }
+
+window.onload = function inicia() {
+  click();
+  trocaMouse();
+  // removeTudo(pegaOl);
+  apagaRiscado();
+};
