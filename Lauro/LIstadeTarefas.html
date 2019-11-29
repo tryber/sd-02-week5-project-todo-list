@@ -19,6 +19,7 @@ h1{
   width: 300px;
 }
 .cumprido{
+ text-decoration: line-through;
  background-color:grey; 
  width: 300px;
 }
@@ -54,10 +55,33 @@ criaTarefa.addEventListener("click", function() {
   digitaTexto.value=null;
 });
 
+//riscar item com duplo clique
+lista.addEventListener('dblclick', function(event){
+ event.target.classList.add('cumprido');
+})
+
+lista.addEventListener('dblclick', function(event){
+ if (event.target.className =='cumprido'){
+    event.target.classList.remove('cumprido');
+}
+})
+
+//destaca a tarefa quando clicada, e remove o destaque das demais
+lista.addEventListener('click', function(event){
+  //para retirar os anteriores
+  tarefa = document.querySelectorAll('.tarefa-aberta');
+  tamanhoLista = document.querySelectorAll('.tarefa-aberta').length
+  for (i=0; i < tamanhoLista;i++){
+    tarefa[i].classList.remove('clicada');
+  }
+  //para destacar
+  event.target.classList.add("clicada");
+  })
+
 //apaga todas as tarefas
 removeTarefa.addEventListener("click", function() {
   tarefa = document.querySelectorAll('.tarefa-aberta, .cumprido, .clicada');
-  listaDeTarefas = document.querySelectorAll('.tarefa-aberta, .cumprido, .clicada').length;
+  listaDeTarefas = document.querySelectorAll('.tarefa-aberta, .cumprido, #clicada').length;
   for (i=0; i < listaDeTarefas;i++){
     tarefa[i].remove()
 }
@@ -72,44 +96,5 @@ removeCumprido.addEventListener("click", function() {
 }
 });
 
-//destaca a tarefa quando clicada, e remove o destaque das demais
-lista.addEventListener('click', function(event){
-  //para marcar como clicada:
-  event.target.setAttribute("class", "clicada");
-  //para remover o destaque dos demais  
-  tarefa = document.querySelectorAll('.clicada');
-  tarefaClicada = document.querySelectorAll('.clicada').length
-  for (i=0; i < tarefaClicada;i++){
-    tarefa[i].classList.remove("clicada");
-    tarefa[i].setAttribute("class", "tarefa-aberta");
-  }
-})
-
-
-
-
-//   cumprido = document.querySelector('.cumprido');
-//   tarefa = document.querySelectorAll('.clicada');
-//   tarefaClicada = document.querySelectorAll('.clicada').length
-//   for (i=0; i < tarefaClicada;i++){
-//     tarefa[i].classList.remove("clicada");
-//     tarefa[i].setAttribute("class", "tarefa-aberta");
-//   }
-//   if (event.target != cumprido){
-//     event.target.setAttribute("class", "clicada");
-//   }
-// })
-
-//riscar item com duplo clique
-lista.addEventListener('dblclick', function(event){
-    if(event.target.style.textDecoration == 'line-through'){
-        event.target.style.textDecoration = 'none';
-        event.target.setAttribute("class", "tarefa-aberta");
-        event.target.classList.remove("cumprido");
-    }else{
-        event.target.style.textDecoration = 'line-through';
-        event.target.className = 'cumprido';
-    }
-})
 </script>
 </html>
