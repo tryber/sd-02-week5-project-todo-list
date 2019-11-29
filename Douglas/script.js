@@ -6,10 +6,11 @@ const apagaTudo = document.getElementById('apagarTudo');
 const apagaRealizado = document.getElementById('apagarCompletos');
 let apaga = document.querySelectorAll('.risca');
 
-function removeTudo(pegaOl) {
+function removeTudo() {
   apagaTudo.addEventListener('click', function () {
-     pegaOl.innerHTML = "";
-   });
+    const pegandoOl = document.querySelector('ol');
+    pegandoOl.innerHTML = '';
+  });
 }
 
 function risca(criaLi) {
@@ -64,6 +65,6 @@ function apagaRiscado() {
 window.onload = function inicia() {
   click();
   trocaMouse();
-  removeTudo(pegaOl);
+  removeTudo();
   apagaRiscado();
 };
