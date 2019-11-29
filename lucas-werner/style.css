@@ -7,3 +7,7 @@ body {
     border-radius: 15px;
     background-color: white;
 }
+
+button {
+    cursor: grab;
+}
