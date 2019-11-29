@@ -78,8 +78,37 @@ let ponteiroBotaoDescer = document.getElementById('descer');
 ponteiroBotaoDescer.addEventListener('click', descer);
 
 function subir() {
-
+    let posicaoMarcada = 0;
+    for (let i = 0; i < ponteiroItemLista.length; i++) {
+        if (ponteiroItemLista[i].style.color == 'red') { posicaoMarcada = i }
+    }
+    if (posicaoMarcada == 0) {
+        let node = ponteiroItemLista[posicaoMarcada];
+        ponteiroOL.insertBefore(node, ponteiroOL.lastChild);
+        node = ponteiroItemLista[ponteiroItemLista.length - 1];
+        ponteiroOL.insertBefore(node, ponteiroItemLista[ponteiroItemLista.length - 2]);
+    }
+    else {
+        let node = ponteiroItemLista[posicaoMarcada];
+        ponteiroOL.insertBefore(node, ponteiroItemLista[posicaoMarcada - 1]);
+    }
 }
+
+function descer() {
+    let posicaoMarcada = 0;
+    for (let i = 0; i < ponteiroItemLista.length; i++) {
+        if (ponteiroItemLista[i].style.color == 'red') { posicaoMarcada = i }
+    }
+    if (posicaoMarcada == ponteiroItemLista.length - 1) {
+        let node = ponteiroItemLista[posicaoMarcada];
+        ponteiroOL.insertBefore(node, ponteiroOL.firstChild);
+    }
+    else {
+        let node = ponteiroItemLista[posicaoMarcada + 1];
+        ponteiroOL.insertBefore(node, ponteiroItemLista[posicaoMarcada]);
+    }
+}
+
 
 window.onload = function () {
     removerTudo();
