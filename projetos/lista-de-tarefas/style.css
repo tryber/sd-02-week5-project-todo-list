@@ -49,6 +49,7 @@ p{
     line-height: 28px;
     width: 560px;
     padding: 0 5px;
+    font-size: 1.2em;
 }
 
 #lista li:hover{
@@ -65,14 +66,23 @@ p{
 }
 
 #escreve-item{
-    padding: 3px 0;
+    padding: 7px 0px 7px 5px;
     width: 250px;
+    font-size: 1em;
+}
+
+#escreve-item::placeholder{
+    font-style: italic;
 }
 
 button{
     margin-left: 15px;
-    padding: 3px 10px;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border-style: none;
 }
+
+
     
 
 
