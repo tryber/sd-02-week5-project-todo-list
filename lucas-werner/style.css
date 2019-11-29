@@ -15,3 +15,7 @@ button {
 .highlight {
     background-color: #FFFF00
 }
+
+.doneItem {
+    text-decoration: line-through;
+}

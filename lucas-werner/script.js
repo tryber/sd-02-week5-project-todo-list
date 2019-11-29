@@ -33,21 +33,29 @@ function fAddTask () {
     document.getElementById('list').appendChild(newItem);
     document.getElementById('newTask').value ='';
     newTask.value = null;
+    console.log(event);
+    // console.log(target)
     newItem.addEventListener('click', function() {
-    event.target.className = 'highlight';
-    }
-    )       
- }
+        const searchElement=document.querySelector('.highlight');
+        
+    if (searchElement===null) {
+        event.target.className = 'highlight';    
+    } else {
+    searchElement.className = '';    
+    event.target.className = 'highlight'; 
+    }})
 
-   
 
+    newItem.addEventListener('dblclick', function(){
+    event.target.className = 'doneItem';
+}
+)
+}
 let done = document.getElementById('done')
     done.addEventListener('click', function(){
-    var elements = document.getElementsByClassName  ('highlight');
-            while(elements.length > 0){
+    var elements = document.getElementsByClassName ('doneItem');
+            while (elements.length > 0){
                 elements[0].parentNode.removeChild(elements[0]);
             }
-        }
-
-       
-    )
+    }
+)
