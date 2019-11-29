@@ -47,7 +47,10 @@ let ponteiroBotaoLimparCompletos = document.getElementById('limparCompletos');
 ponteiroBotaoLimparCompletos.addEventListener('click', removerCompletos);
 function removerCompletos() {
     for (let i = 0; i < ponteiroItemLista.length; i++) {
-        if (ponteiroItemLista[i].style.textDecoration == 'line-through') ponteiroOL.removeChild(ponteiroItemLista[i]);
+        if (ponteiroItemLista[i].style.textDecoration == 'line-through') {
+            ponteiroOL.removeChild(ponteiroItemLista[i]);
+            i -= 1;
+        }
     }
 }
 
@@ -74,8 +77,8 @@ ponteiroBotaoSubir.addEventListener('click', subir);
 let ponteiroBotaoDescer = document.getElementById('descer');
 ponteiroBotaoDescer.addEventListener('click', descer);
 
-function subir(){
-    
+function subir() {
+
 }
 
 window.onload = function () {
