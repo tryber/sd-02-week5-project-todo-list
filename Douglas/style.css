@@ -1,0 +1,13 @@
+html{
+  text-align: center;
+}
+
+ol{
+  list-style-position: inside;
+}
+li{
+  text-align: center;
+}
+.mystyle{
+  text-decoration: line-through;
+}
