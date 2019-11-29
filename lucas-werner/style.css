@@ -11,3 +11,7 @@ body {
 button {
     cursor: grab;
 }
+
+.highlight {
+    background-color: #FFFF00
+}

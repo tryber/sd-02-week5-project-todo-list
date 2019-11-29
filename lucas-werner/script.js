@@ -1,6 +1,9 @@
 let newTask= document.getElementById('newTask')
 let clear = document.getElementById('clear')
 let addTask = document.getElementById('addTask')
+let highlight = document.getElementsByClassName('highlight')
+let lista = document.getElementById('list')
+
 
 addTask.addEventListener('click', function(){
     if (newTask.value == '') {
@@ -11,7 +14,6 @@ addTask.addEventListener('click', function(){
 })
 
 clear.addEventListener('click', function(){
-    let lista = document.getElementById('list')
     while (lista.firstChild){
     lista.removeChild(lista.firstChild)
     }
@@ -32,12 +34,20 @@ function fAddTask () {
     document.getElementById('newTask').value ='';
     newTask.value = null;
     newItem.addEventListener('click', function() {
-    event.target.style.color = 'yellow'; 
+    event.target.className = 'highlight';
     }
     )       
  }
-    
+
    
 
-    // let done = getElementById('done')
-    // done.
+let done = document.getElementById('done')
+    done.addEventListener('click', function(){
+    var elements = document.getElementsByClassName  ('highlight');
+            while(elements.length > 0){
+                elements[0].parentNode.removeChild(elements[0]);
+            }
+        }
+
+       
+    )
