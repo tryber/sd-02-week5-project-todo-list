@@ -5,9 +5,19 @@ html{
 ol{
   list-style-position: inside;
 }
+
 li{
   text-align: center;
 }
-.mystyle{
+
+.risca{
   text-decoration: line-through;
+}
+
+.destaca{
+  background-color: blue;
+}
+
+.destaque{
+  background-color: cornsilk;
 }
