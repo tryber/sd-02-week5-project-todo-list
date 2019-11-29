@@ -2,15 +2,15 @@ const ok = document.getElementById('envia');
 const entrada = document.getElementById('entrada');
 const pegaOl = document.querySelector('ol');
 const botoes = document.querySelectorAll('button');
-// const apagaTudo = document.getElementById('apagarTudo');
+const apagaTudo = document.getElementById('apagarTudo');
 const apagaRealizado = document.getElementById('apagarCompletos');
 let apaga = document.querySelectorAll('.risca');
 
-// function removeTudo(pegaOl) {
-//     apagaTudo.addEventListener('click', function () {
-//     pegaOl.innerHTM = "";
-//   });
-// }
+function removeTudo(pegaOl) {
+  apagaTudo.addEventListener('click', function () {
+     pegaOl.innerHTML = "";
+   });
+}
 
 function risca(criaLi) {
   criaLi.addEventListener('dblclick', function() {
@@ -64,6 +64,6 @@ function apagaRiscado() {
 window.onload = function inicia() {
   click();
   trocaMouse();
-  // removeTudo(pegaOl);
+  removeTudo(pegaOl);
   apagaRiscado();
 };
