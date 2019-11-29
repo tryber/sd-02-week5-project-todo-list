@@ -8,14 +8,14 @@ const item= document.querySelectorAll ('item');
 let apaga = document.querySelectorAll ('.risca');
 
 window.onload = function () {
-this.click ();
-this.trocaMouse ();
-this.removeTudo ();
-this.apagaRiscado();
+  this.click ();
+  this.trocaMouse ();
+  this.removeTudo ();
+  this.apagaRiscado ();
 };
 
-function removeTudo(){
-  apagaTudo.addEventListener('click', function () {
+function removeTudo () {
+  apagaTudo.addEventListener ('click', function () {
   pegaOl.innerHTML='';
 });
 }
@@ -32,22 +32,25 @@ function adicionaLinha (argumento) {
   criaLi.innerText = argumento;
   criaLi.classList = ('class', 'item');
   entrada.value = '';
-  risca(criaLi);
-  marca(criaLi);
+  risca (criaLi);
+  marca (criaLi);
 };
 
 function risca (criaLi) {
   let j =0;
   criaLi.addEventListener ('dblclick', function () {
-    criaLi.classList.toggle("risca");
+    criaLi.classList.toggle ("risca");
     apaga = document.querySelectorAll ('.risca');
 })
 };
 
 function marca (criaLi) {
-  let i=0;
   criaLi.addEventListener ('click', function () {
-    criaLi.classList.toggle("destaca");
+    let unico= document.querySelectorAll('destaca');
+    for(let i = 0; i < unico.lenght; i++ ){
+      unico[i].classList.remove('destaca');
+    }
+    criaLi.classList.add ("destaca");
   });
 };
 
@@ -55,7 +58,7 @@ function trocaMouse () {
   for( let i = 0 ; i < botoes.length; i++ ){
     botoes[i].addEventListener ('mouseover', function () {
     botoes[i].style.cursor = "pointer";
-    botoes[i].style.backgroundColor= 'cornsilk';
+    botoes[i].style.backgroundColor = 'cornsilk';
     });
     botoes[i].addEventListener ('mouseout', function () {
       botoes[i].style.backgroundColor = 'ButtonFace';

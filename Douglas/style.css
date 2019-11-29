@@ -1,5 +1,10 @@
-html{
-  text-align: center;
+body{
+  background-color: rgb(158, 231, 84) ;
+  font-family: 'Anton', sans-serif;
+}
+
+h1{
+  letter-spacing:4px;
 }
 
 ol{
@@ -20,4 +25,24 @@ li{
 
 .destaque{
   background-color: cornsilk;
+}
+
+input{
+  padding: 10px 20px;
+}
+
+#container{
+  background-color: white;
+  border-radius: 10%;
+  width: max-content;
+  margin: auto;
+  text-align: center;
+  min-height: 300px;
+  padding: 10px 20px;
+}
+
+button{
+  margin: 3px 3px 3px 5px;
+  padding: 10px 20px;
+  font-family: 'Anton', sans-serif;
 }
