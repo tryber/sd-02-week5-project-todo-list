@@ -14,14 +14,14 @@ function removeTudo() {
 }
 
 function risca(criaLi) {
-  criaLi.addEventListener('dblclick', function() {
+  criaLi.addEventListener('dblclick', function () {
     criaLi.classList.toggle('risca');
     apaga = document.querySelectorAll('.risca');
   });
 }
 
 function marca(criaLi) {
-  criaLi.addEventListener('click', function() {
+  criaLi.addEventListener('click', function () {
     criaLi.classList.toggle('destaca');
   });
 }
@@ -37,25 +37,25 @@ function adicionaLinha(argumento) {
 }
 
 function click() {
-  ok.addEventListener('click', function() {
+  ok.addEventListener('click', function () {
     adicionaLinha(entrada.value);
   });
 }
 
 function trocaMouse() {
   for (let i = 0; i < botoes.length; i += 1) {
-    botoes[i].addEventListener('mouseover', function() {
+    botoes[i].addEventListener('mouseover', function () {
       botoes[i].style.cursor = 'pointer';
       botoes[i].style.backgroundColor = 'cornsilk';
-      });
-    botoes[i].addEventListener('mouseout', function() {
+    });
+    botoes[i].addEventListener('mouseout', function () {
       botoes[i].style.backgroundColor = 'ButtonFace';
     });
   }
 }
 
 function apagaRiscado() {
-  apagaRealizado.addEventListener('click', function() {
+  apagaRealizado.addEventListener('click', function () {
     for (let i = 0; i < apaga.length; i += 1) {
       pegaOl.removeChild(apaga[i]);
     }
