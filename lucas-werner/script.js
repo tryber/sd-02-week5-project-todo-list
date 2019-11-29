@@ -50,6 +50,7 @@ function fAddTask () {
     event.target.className = 'doneItem';
 }
 )
+    newItem.addEventListener('h')
 }
 let done = document.getElementById('done')
     done.addEventListener('click', function(){

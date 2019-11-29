@@ -9,9 +9,9 @@ body {
 }
 
 button {
-    cursor: grab;
+    cursor: grab
 }
-
+      
 .highlight {
     background-color: #FFFF00
 }
@@ -19,3 +19,7 @@ button {
 .doneItem {
     text-decoration: line-through;
 }
+
+ol li:hover {
+    background: #ddd;
+  }
