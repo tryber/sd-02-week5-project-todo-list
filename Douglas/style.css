@@ -1,37 +1,37 @@
-body{
-  background-color: rgb(158, 231, 84) ;
-  font-family: 'Anton', sans-serif;
+body {
+  background-color: rgb( 158 , 231 , 84 );
+  font-family: "Anton" , sans-serif;
 }
 
-h1{
-  letter-spacing:4px;
+h1 {
+  letter-spacing: 4px;
 }
 
-ol{
+ol {
   list-style-position: inside;
 }
 
-li{
+li {
   text-align: center;
 }
 
-.risca{
+.risca {
   text-decoration: line-through;
 }
 
-.destaca{
+.destaca {
   background-color: blue;
 }
 
-.destaque{
+.destaque {
   background-color: cornsilk;
 }
 
-input{
+input {
   padding: 10px 20px;
 }
 
-#container{
+#container {
   background-color: white;
   border-radius: 10%;
   width: max-content;
@@ -41,8 +41,8 @@ input{
   padding: 10px 20px;
 }
 
-button{
+button {
   margin: 3px 3px 3px 5px;
   padding: 10px 20px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Anton' , sans-serif;
 }
