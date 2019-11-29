@@ -12,7 +12,9 @@ h1{
   text-align: center;
 }
 #tarefas{
-    cursor: pointer;
+  cursor: pointer;
+  user-select: none;
+
 }
 .clicada{
   background-color:yellow;
@@ -55,14 +57,10 @@ criaTarefa.addEventListener("click", function() {
   digitaTexto.value=null;
 });
 
-//riscar item com duplo clique
+// //riscar item com duplo clique
 lista.addEventListener('dblclick', function(event){
- event.target.classList.add('cumprido');
-})
-
-lista.addEventListener('dblclick', function(event){
- if (event.target.className =='cumprido'){
-    event.target.classList.remove('cumprido');
+ if (event.target.className != 'cumprido'){
+    event.target.classList.toggle('cumprido');
 }
 })
 
