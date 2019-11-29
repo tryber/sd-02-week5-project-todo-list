@@ -8,7 +8,7 @@ function addTodo(text) {
     id: Date.now(),
   };
 
-  todoItems.push(todo);
+  todoItems.push(todo);  
 
   const list = document.querySelector('.js-todo-list');
   list.insertAdjacentHTML('beforeend', `
@@ -126,6 +126,7 @@ function removeChecked() {
   // }
   document.querySelectorAll('.done').forEach(a => a.remove());
 }
+
 }
 
 
