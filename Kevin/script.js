@@ -15,7 +15,7 @@ function addTodo(text) {
     <li class="todo-item" data-key="${todo.id}">
       <input id="${todo.id}" type="checkbox"/>
       <label for="${todo.id}" class="tick js-tick"></label>
-      <span>${todo.text}</span>
+      <span class="li">${todo.text}</span>
       <button class="delete-todo js-delete-todo">
         <svg><use href="#delete-icon"></use></svg>
       </button>
@@ -89,4 +89,43 @@ list.addEventListener('click', event => {
   }
 
 });
+list.addEventListener('dblclick', event => {
+  if (event.target.classList.contains ('li')) {
+    event.target.parentNode.classList.toggle('done');
+  }
+})
+
+list.addEventListener('click', event => {
+  if (event.target.classList.contains ('li')) {
+    event.target.classList.toggle('selected');
+  }
+})
+
+function removeAll(){
+  let lst = document.getElementsByTagName("ol");
+  lst[0].innerHTML = "";
 }
+
+let clearList = document.querySelector('#clear-list')
+clearList.addEventListener ('click', removeAll)
+
+
+const clearDone = document.querySelector('#clear-done');
+
+clearDone.addEventListener('click', removeChecked);
+
+function removeChecked() {
+  // todoItems.filter(a => a.checked === true);
+
+  // todoItems.forEach(a => a.checked === true ? document.querySelector(`[data-key='${a.id}']`).remove() : null)
+
+  // for(let i = 0; i < todoItems.length; i++) {
+  //   if (todoItems[i].checked === true) {
+  //     document.querySelector(`[data-key='${todoItems[i].id}']`).remove()
+  //   }
+  // }
+  document.querySelectorAll('.done').forEach(a => a.remove());
+}
+}
+
+

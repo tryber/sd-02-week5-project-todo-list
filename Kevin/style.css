@@ -187,3 +187,7 @@ input[type="text"] {
 .todo-list:empty + .empty-state {
   display: flex;
 }
+
+.selected {
+  background-color: lightcoral;
+}
