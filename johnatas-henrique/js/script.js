@@ -58,38 +58,38 @@ listaOrdenada.querySelectorAll('li').forEach(doubleClickTarefa);
 
 /* Botão apagar riscados */
 
-function apagarRiscadas(){
-    let itemListaOrdenada = listaOrdenada.querySelectorAll('li');
-    for (let i= 0 ; i< itemListaOrdenada.length; i++ ){
-       let listaTodasClasses = itemListaOrdenada[i].className;
-       let buscaRisco = listaTodasClasses.indexOf('tarefa-riscada');
-       if (buscaRisco !=-1) {
-           itemListaOrdenada[i].parentNode.removeChild(itemListaOrdenada[i]);
-       }
+function apagarRiscadas() {
+  let itemListaOrdenada = listaOrdenada.querySelectorAll('li');
+  for (let i = 0; i < itemListaOrdenada.length; i++) {
+    let listaTodasClasses = itemListaOrdenada[i].className;
+    let buscaRisco = listaTodasClasses.indexOf('tarefa-riscada');
+    if (buscaRisco != -1) {
+      itemListaOrdenada[i].parentNode.removeChild(itemListaOrdenada[i]);
     }
+  }
 }
 
-botaoApagarRiscadas.addEventListener('click',apagarRiscadas);
+botaoApagarRiscadas.addEventListener('click', apagarRiscadas);
 
 /* Botão apagar tudo */
 
-function apagarTudo(){
-    listaOrdenada.innerHTML = '';
+function apagarTudo() {
+  listaOrdenada.innerHTML = '';
 }
 
-botaoApagarTudo.addEventListener('click',apagarTudo);
+botaoApagarTudo.addEventListener('click', apagarTudo);
 
 /* Botão apagar selecionado */
 
-function apagarSelecionada(){
-    let itemListaOrdenada = listaOrdenada.querySelectorAll('li');
-    for (let i= 0 ; i< itemListaOrdenada.length; i++ ){
-       let listaTodasClasses = itemListaOrdenada[i].className;
-       let buscaRisco = listaTodasClasses.indexOf('tarefa-selecionada');
-       if (buscaRisco !=-1) {
-           itemListaOrdenada[i].parentNode.removeChild(itemListaOrdenada[i]);
-       }
+function apagarSelecionada() {
+  let itemListaOrdenada = listaOrdenada.querySelectorAll('li');
+  for (let i = 0; i < itemListaOrdenada.length; i++) {
+    let listaTodasClasses = itemListaOrdenada[i].className;
+    let buscaRisco = listaTodasClasses.indexOf('tarefa-selecionada');
+    if (buscaRisco != -1) {
+      itemListaOrdenada[i].parentNode.removeChild(itemListaOrdenada[i]);
     }
+  }
 }
 
-botaoApagarSelecionada.addEventListener('click',apagarSelecionada);
+botaoApagarSelecionada.addEventListener('click', apagarSelecionada);

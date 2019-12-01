@@ -20,39 +20,39 @@ body {
 }
 
 .titulo-topo {
-    -webkit-text-stroke: 1px rgb(2, 54, 2);
-    -webkit-text-fill-color: white;
-    text-align: center;
-    font-size: 4em;
+  -webkit-text-stroke: 1px rgb(2, 54, 2);
+  -webkit-text-fill-color: white;
+  text-align: center;
+  font-size: 4em;
 }
 
 .container {
-    background-color: whitesmoke;
-    width: 40%;
-    border-radius: 15px;
-    margin: 20px auto;
-    padding: 25px 45px;
+  background-color: whitesmoke;
+  width: 40%;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 25px 45px;
 }
 
-.titulo-section{
-    margin: 0 0 15px;
+.titulo-section {
+  margin: 0 0 15px;
 }
 
-.texto-section{
-    display: block;
-    text-align: justify;
-    font-size: 0.9em;
-    margin-bottom: 20px;
+.texto-section {
+  display: block;
+  text-align: justify;
+  font-size: 0.9em;
+  margin-bottom: 20px;
 }
 
-.input-tarefa{
-    height: 37px;
-    border: 1px solid black;
-    margin: 0 5px 10px 0;
-    width: 35ch;
-    border-radius: 6px;
-    padding-left: 1ch;
-    font-size: 1.1em;
+.input-tarefa {
+  height: 37px;
+  border: 1px solid black;
+  margin: 0 5px 10px 0;
+  width: 35ch;
+  border-radius: 6px;
+  padding-left: 1ch;
+  font-size: 1.1em;
 }
 
 .botao {
@@ -83,44 +83,45 @@ body {
 }
 
 .botao-blue {
-    color: white;
-    border: 1px solid blue;
-    background: blue;
-  }
+  color: white;
+  border: 1px solid blue;
+  background: blue;
+}
 
-  .botao:hover {
-    color: white;
-    border: 1px solid rgb(10, 80, 185);
-    opacity: 0.3;
-  }
+.botao:hover {
+  color: white;
+  border: 1px solid rgb(10, 80, 185);
+  opacity: 0.3;
+}
 
-.lista-ordenada{
-    list-style-position: inside;
-    margin: 10px 0 20px;
+.lista-ordenada {
+  list-style-position: inside;
+  margin: 10px 0 20px;
 }
 
 .tarefa {
-    width: auto;
-    font-size: 1.2em;
-    padding-left: 0.5ch;
+  width: auto;
+  font-size: 1.2em;
+  padding-left: 0.5ch;
 }
 
 .tarefa-ativa {
-    border: 2px solid green;
+  border: 2px solid green;
 }
 
 .tarefa-riscada {
-    text-decoration: line-through;
-    border: 2px solid red;
+  text-decoration: line-through;
+  border: 2px solid red;
 }
 
 .tarefa-selecionada {
-    background: #bbb;
-    font-size: 1.3em;
-    font-weight: 700;
-    border: 2px solid black;
+  background: #bbb;
+  font-size: 1.3em;
+  font-weight: 700;
+  border: 2px solid black;
 
 }
+
 .rodape {
   -webkit-text-stroke: 1px rgb(2, 54, 2);
   -webkit-text-fill-color: white;
@@ -130,7 +131,7 @@ body {
 
 .texto-rodape {
   text-align: center;
-  
+
   margin-top: 5px;
 }
 
