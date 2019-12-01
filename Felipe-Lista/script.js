@@ -1,14 +1,18 @@
-const textoFormulario = document.querySelector('#textoFormulario').value
+let textoFormulario = document.querySelector('#textoFormulario')
 const listaAtual = document.querySelectorAll('.listaTarefas')[0]
 const botaoEnviar = document.querySelector('#botaoEnviar')
 const elementoAtual = document.querySelectorAll('ol')
+let conteudoElemento;
 
 
-function itemListaPreenchido(){
+
+
+function itemListaPreenchido(event){
+    event.preventDefault()
     novoElemento = document.createElement('li')
-    conteudoElemento = document.createTextNode(textoFormulario)
-    novoElemento.appendChild(conteudoElemento)
+    novoElemento.innerText = textoFormulario.value
     elementoAtual[0].appendChild(novoElemento)
+    textoFormulario.value = "";
 }
 
 
