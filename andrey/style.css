@@ -1,56 +1,55 @@
+button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 8px;
+  color: white;
+  border-radius: 8px;
+}
 
-  button {
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    padding: 8px;
-    color: white;
-    border-radius: 8px;
-  }
+button.adicionar , button.limpar-completos {
+  background-color: rgb( 0 , 135 , 207 );
+}
 
-  button.adicionar , button.limpar-completos {
-    background-color: rgb( 0 , 135 , 207 );
-  }
+button.close , button.limpar-lista {
+  background-color: rgb( 144 , 25 , 27 );
+}
 
-  button.close , button.limpar-lista {
-    background-color: rgb( 144 , 25 , 27 );
-  }
+button.up , button.down {
+  background-color: rgb( 252 , 127 , 0 );
+}
 
-  button.up , button.down {
-    background-color: rgb( 252 , 127 , 0 );
-  }
+button.salvar {
+  background-color: rgb( 64 , 173 , 64 );
+}
 
-  button.salvar {
-    background-color: rgb( 64 , 173 , 64 );
-  }
+.material-icons {
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 13px;
+}
 
-  .material-icons {
-    padding-right: 5px;
-    padding-left: 5px;
-    font-size: 13px;
-  }
+.lista {
+  margin: 20px;
+  width: 300px;
+  min-height: 100px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
 
-  .lista {
-    margin: 20px;
-    width: 300px;
-    min-height: 100px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-  }
+.line-through {
+  text-decoration: line-through;
+}
 
-  .line-through {
-    text-decoration: line-through;
-  }
+p.item:hover {
+  background: rgb( 201 , 201 , 201 );
+}
 
-  p.item:hover {
-    background: rgb( 201 , 201 , 201 );
-  }
+.gray {
+  background: gray;
+}
 
-  .gray {
-    background: gray;
-  }
-
-  .white {
-    background: white;
-  }
+.white {
+  background: white;
+}
