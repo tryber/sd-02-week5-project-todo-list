@@ -58,10 +58,10 @@ criarTarefa.addEventListener('click', textonaLista);
 /* Botão apagar tudo */
 
 function apagarTudo() {
-    listaOrdenada.innerHTML = '';
-  }
-  
-  botaoApagarTudo.addEventListener('click', apagarTudo);  
+  listaOrdenada.innerHTML = '';
+}
+
+botaoApagarTudo.addEventListener('click', apagarTudo);
 
 /* Botão apagar riscados */
 
@@ -76,18 +76,18 @@ function apagarItemsLista() {
   }
 }
 
-function buscaRiscadas(){
-    buscaClasse = 'tarefa-riscada';
-    apagarItemsLista();
+function buscaRiscadas() {
+  buscaClasse = 'tarefa-riscada';
+  apagarItemsLista();
 }
 
 botaoApagarRiscadas.addEventListener('click', buscaRiscadas);
 
 /* Botão apagar selecionado */
 
-function buscaSelecionada(){
-    buscaClasse = 'tarefa-selecionada';
-    apagarItemsLista();
+function buscaSelecionada() {
+  buscaClasse = 'tarefa-selecionada';
+  apagarItemsLista();
 }
 
 
