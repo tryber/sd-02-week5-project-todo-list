@@ -20,6 +20,11 @@ h1{
   background-color:yellow;
   width: 300px;
 }
+button{
+  background-color:transparent;
+  border: 2px solid red;
+  border-radius: 10%;
+}
 .cumprido{
  text-decoration: line-through;
  background-color:grey; 
@@ -59,9 +64,7 @@ criaTarefa.addEventListener("click", function() {
 
 // //riscar item com duplo clique
 lista.addEventListener('dblclick', function(event){
- if (event.target.className != 'cumprido'){
     event.target.classList.toggle('cumprido');
-}
 })
 
 //destaca a tarefa quando clicada, e remove o destaque das demais
