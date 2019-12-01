@@ -68,7 +68,21 @@ body {
 
 .tarefa {
     width: 40%;
-    border: 2px solid red;
+    
+}
+
+.tarefa-ativa {
+    border: 2px solid green;
+}
+
+.tarefa-riscada {
+    text-decoration: line-through;
+}
+
+.tarefa-selecionada {
+    background: #bbb;
+    border: 2px solid black;
+
 }
 .rodape {
   -webkit-text-stroke: 1px black;
