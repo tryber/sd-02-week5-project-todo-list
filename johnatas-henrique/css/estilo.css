@@ -39,6 +39,7 @@ body {
 }
 
 .texto-section{
+    display: block;
     text-align: justify;
     font-size: 0.9em;
     margin-bottom: 20px;
@@ -115,6 +116,8 @@ body {
 
 .tarefa-selecionada {
     background: #bbb;
+    font-size: 1.3em;
+    font-weight: 700;
     border: 2px solid black;
 
 }
