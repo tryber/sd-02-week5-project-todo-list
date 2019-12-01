@@ -16,20 +16,42 @@
 
 body {
   font-family: animeace, sans-serif;
-  background-color: aquamarine;
+  background-color: rgb(14, 202, 14);
 }
 
 .titulo-topo {
+    -webkit-text-stroke: 1px rgb(2, 54, 2);
+    -webkit-text-fill-color: white;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .container {
     background-color: whitesmoke;
-    width: 70%;
+    width: 40%;
     border-radius: 15px;
     margin: 20px auto;
-    padding: 15px;
+    padding: 25px 45px;
+}
+
+.titulo-section{
+    margin: 0 0 15px;
+}
+
+.texto-section{
+    text-align: justify;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.input-tarefa{
+    height: 37px;
+    border: 1px solid black;
+    margin: 0 5px 10px 0;
+    width: 35ch;
+    border-radius: 6px;
+    padding-left: 1ch;
+    font-size: 1.1em;
 }
 
 .botao {
@@ -37,12 +59,8 @@ body {
   padding: 8px;
   font-weight: 700;
   cursor: pointer;
-}
-
-.botao:hover {
-  color: white;
-  border: 1px solid rgb(10, 80, 185);
-  background: rgb(10, 80, 185);
+  font-size: 1.1em;
+  margin: 0 5px 10px 0;
 }
 
 .botao-red {
@@ -62,13 +80,28 @@ body {
   border: 1px solid orangered;
   background: orangered;
 }
+
+.botao-blue {
+    color: white;
+    border: 1px solid blue;
+    background: blue;
+  }
+
+  .botao:hover {
+    color: white;
+    border: 1px solid rgb(10, 80, 185);
+    opacity: 0.3;
+  }
+
 .lista-ordenada{
     list-style-position: inside;
+    margin: 10px 0 20px;
 }
 
 .tarefa {
-    width: 40%;
-    
+    width: auto;
+    font-size: 1.2em;
+    padding-left: 0.5ch;
 }
 
 .tarefa-ativa {
@@ -77,6 +110,7 @@ body {
 
 .tarefa-riscada {
     text-decoration: line-through;
+    border: 2px solid red;
 }
 
 .tarefa-selecionada {
@@ -85,29 +119,31 @@ body {
 
 }
 .rodape {
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px rgb(2, 54, 2);
   -webkit-text-fill-color: white;
+  font-size: 1.1em;
   margin-bottom: 40px;
 }
 
 .texto-rodape {
   text-align: center;
-  font-size: 1.1em;
+  
   margin-top: 5px;
 }
 
 .voltar-topo,
 .voltar-topo:visited {
   text-decoration: none;
-  font-size: 1.1em;
-  -webkit-text-stroke: 1px black;
+  font-weight: 700;
+  -webkit-text-stroke: 1px rgb(2, 54, 2);
   -webkit-text-fill-color: white;
   margin: 50px 0 0;
 }
 
 .voltar-topo:hover {
   text-decoration: none;
-  background-color: red;
+  background-color: rgb(2, 54, 2);
   color: white;
-  padding: 4px 0;
+  padding: 4px 6px;
+  border-radius: 8px;
 }
