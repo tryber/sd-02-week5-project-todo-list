@@ -1,46 +1,99 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  @font-face {
-    font-family: animeace;
-    src: url( '../fonts/animeace2_reg.ttf' );
-  }
-  
-  @font-face {
-    font-family: animeace;
-    src: url( '../fonts/animeace2_bld.ttf' );
-    font-weight: 700;
-  }
-  
-  body {
-    font-family: animeace , sans-serif;
-  }
-  
-  .rodape {
-    -webkit-text-stroke: 1px black;
-    -webkit-text-fill-color: white;
-    margin-bottom: 40px;
-  }
-  
-  .texto-rodape {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: animeace;
+  src: url('../fonts/animeace2_reg.ttf');
+}
+
+@font-face {
+  font-family: animeace;
+  src: url('../fonts/animeace2_bld.ttf');
+  font-weight: 700;
+}
+
+body {
+  font-family: animeace, sans-serif;
+  background-color: aquamarine;
+}
+
+.titulo-topo {
     text-align: center;
-    font-size: 1.1em;
-    margin-top: 5px;
-  }
-  
-  .voltar-topo , .voltar-topo:visited {
-    text-decoration: none;
-    font-size: 1.1em;
-    -webkit-text-stroke: 1px black;
-    -webkit-text-fill-color: white;
-    margin: 50px 0 0;
-  }
-  
-  .voltar-topo:hover {
-    text-decoration: none;
-    background-color: red;
-    color: white;
-    padding: 4px 0;
-  
+    font-size: 3em;
+}
+
+.container {
+    background-color: whitesmoke;
+    width: 70%;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.botao {
+  border-radius: 6px;
+  padding: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao:hover {
+  color: white;
+  border: 1px solid rgb(10, 80, 185);
+  background: rgb(10, 80, 185);
+}
+
+.botao-red {
+  color: white;
+  border: 1px solid red;
+  background: red;
+}
+
+.botao-green {
+  color: white;
+  border: 1px solid rgb(2, 73, 2);
+  background: rgb(2, 73, 2);
+}
+
+.botao-orange {
+  color: white;
+  border: 1px solid orangered;
+  background: orangered;
+}
+.lista-ordenada{
+    list-style-position: inside;
+}
+
+.tarefa {
+    width: 40%;
+    border: 2px solid red;
+}
+.rodape {
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+  margin-bottom: 40px;
+}
+
+.texto-rodape {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.voltar-topo,
+.voltar-topo:visited {
+  text-decoration: none;
+  font-size: 1.1em;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+  margin: 50px 0 0;
+}
+
+.voltar-topo:hover {
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 4px 0;
+}
