@@ -1,14 +1,14 @@
 const criarTarefa = document.querySelector('.criar-tarefa');
 const textoTarefa = document.querySelector('#texto-tarefa');
-listaOrdenada = document.querySelector('ol');
-botaoApagarRiscadas = document.querySelector('.apagar-riscadas');
-botaoApagarSelecionada = document.querySelector('.apagar-selecionada');
-botaoApagarTudo = document.querySelector('.apagar-tudo');
+const listaOrdenada = document.querySelector('ol');
+const botaoApagarRiscadas = document.querySelector('.apagar-riscadas');
+const botaoApagarSelecionada = document.querySelector('.apagar-selecionada');
+const botaoApagarTudo = document.querySelector('.apagar-tudo');
 
 /* Escrever texto do input na li */
 
 function textonaLista() {
-  let itemLista = document.createElement('li');
+  const itemLista = document.createElement('li');
   itemLista.innerText = textoTarefa.value;
   itemLista.className = 'tarefa tarefa-ativa';
   textoTarefa.value = '';
@@ -23,11 +23,12 @@ criarTarefa.addEventListener('click', textonaLista);
 /* Selecionar tarefa - single-click */
 
 function selecionaTarefa(event) {
-  let tamLista = listaOrdenada.querySelectorAll('li').length;
-  for (let i = 0; i < tamLista; i++) {
+  const tamLista = listaOrdenada.querySelectorAll('li').length;
+  for (let i = 0; i < tamLista; i += 1) {
     listaOrdenada.querySelectorAll('li')[i].classList.remove('tarefa-selecionada');
   }
-  event.target.classList += ' tarefa-selecionada';
+  evento = event
+  evento.target.classList += ' tarefa-selecionada';
 }
 
 function singleClickTarefa(item) {
@@ -39,14 +40,15 @@ listaOrdenada.querySelectorAll('li').forEach(singleClickTarefa);
 /* Riscar tarefa double-click */
 
 function riscaTarefa(event) {
-  let listaTodasClasses = event.target.className;
-  let buscaRisco = listaTodasClasses.indexOf('tarefa-riscada')
-  if (buscaRisco != -1) {
-    event.target.classList.remove('tarefa-riscada');
-    event.target.classList += ' tarefa-ativa';
+  const listaTodasClasses = event.target.className;
+  const buscaRisco = listaTodasClasses.indexOf('tarefa-riscada');
+  const evento = event
+  if (buscaRisco !== -1) {
+    evento.target.classList.remove('tarefa-riscada');
+    evento.target.classList += ' tarefa-ativa';
   } else {
-    event.target.classList.remove('tarefa-ativa');
-    event.target.classList += ' tarefa-riscada';
+    evento.target.classList.remove('tarefa-ativa');
+    evento.target.classList += ' tarefa-riscada';
   }
 }
 
@@ -59,11 +61,11 @@ listaOrdenada.querySelectorAll('li').forEach(doubleClickTarefa);
 /* Botão apagar riscados */
 
 function apagarRiscadas() {
-  let itemListaOrdenada = listaOrdenada.querySelectorAll('li');
-  for (let i = 0; i < itemListaOrdenada.length; i++) {
-    let listaTodasClasses = itemListaOrdenada[i].className;
-    let buscaRisco = listaTodasClasses.indexOf('tarefa-riscada');
-    if (buscaRisco != -1) {
+  itemListaOrdenada = listaOrdenada.querySelectorAll('li');
+  for (let i = 0; i < itemListaOrdenada.length; i += 1) {
+    const listaTodasClasses = itemListaOrdenada[i].className;
+    const buscaRisco = listaTodasClasses.indexOf('tarefa-riscada');
+    if (buscaRisco !== -1) {
       itemListaOrdenada[i].parentNode.removeChild(itemListaOrdenada[i]);
     }
   }
@@ -82,11 +84,11 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 /* Botão apagar selecionado */
 
 function apagarSelecionada() {
-  let itemListaOrdenada = listaOrdenada.querySelectorAll('li');
-  for (let i = 0; i < itemListaOrdenada.length; i++) {
-    let listaTodasClasses = itemListaOrdenada[i].className;
-    let buscaRisco = listaTodasClasses.indexOf('tarefa-selecionada');
-    if (buscaRisco != -1) {
+  itemListaOrdenada = listaOrdenada.querySelectorAll('li');
+  for (let i = 0; i < itemListaOrdenada.length; i += 1) {
+    const listaTodasClasses = itemListaOrdenada[i].className;
+    const buscaRisco = listaTodasClasses.indexOf('tarefa-selecionada');
+    if (buscaRisco !== -1) {
       itemListaOrdenada[i].parentNode.removeChild(itemListaOrdenada[i]);
     }
   }

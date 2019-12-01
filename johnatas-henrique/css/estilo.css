@@ -5,22 +5,22 @@
 
 @font-face {
   font-family: animeace;
-  src: url('../fonts/animeace2_reg.ttf');
+  src: url( '../fonts/animeace2_reg.ttf' );
 }
 
 @font-face {
   font-family: animeace;
-  src: url('../fonts/animeace2_bld.ttf');
+  src: url( '../fonts/animeace2_bld.ttf' );
   font-weight: 700;
 }
 
 body {
-  font-family: animeace, sans-serif;
-  background-color: rgb(14, 202, 14);
+  font-family: animeace , sans-serif;
+  background-color: rgb( 14 , 202 , 14 );
 }
 
 .titulo-topo {
-  -webkit-text-stroke: 1px rgb(2, 54, 2);
+  -webkit-text-stroke: 1px rgb( 2 , 54 , 2 );
   -webkit-text-fill-color: white;
   text-align: center;
   font-size: 4em;
@@ -72,8 +72,8 @@ body {
 
 .botao-green {
   color: white;
-  border: 1px solid rgb(2, 73, 2);
-  background: rgb(2, 73, 2);
+  border: 1px solid rgb( 2 , 73 , 2 );
+  background: rgb( 2 , 73 , 2 );
 }
 
 .botao-orange {
@@ -90,7 +90,7 @@ body {
 
 .botao:hover {
   color: white;
-  border: 1px solid rgb(10, 80, 185);
+  border: 1px solid rgb( 10 , 80 , 185 );
   opacity: 0.3;
 }
 
@@ -115,7 +115,7 @@ body {
 }
 
 .tarefa-selecionada {
-  background: #bbb;
+  background: rgb( 187 , 187 , 187 );
   font-size: 1.3em;
   font-weight: 700;
   border: 2px solid black;
@@ -123,7 +123,7 @@ body {
 }
 
 .rodape {
-  -webkit-text-stroke: 1px rgb(2, 54, 2);
+  -webkit-text-stroke: 1px rgb( 2 , 54 , 2 );
   -webkit-text-fill-color: white;
   font-size: 1.1em;
   margin-bottom: 40px;
@@ -131,22 +131,20 @@ body {
 
 .texto-rodape {
   text-align: center;
-
   margin-top: 5px;
 }
 
-.voltar-topo,
-.voltar-topo:visited {
+.voltar-topo , .voltar-topo:visited {
   text-decoration: none;
   font-weight: 700;
-  -webkit-text-stroke: 1px rgb(2, 54, 2);
+  -webkit-text-stroke: 1px rgb( 2 , 54 , 2 );
   -webkit-text-fill-color: white;
   margin: 50px 0 0;
 }
 
 .voltar-topo:hover {
   text-decoration: none;
-  background-color: rgb(2, 54, 2);
+  background-color: rgb( 2 , 54 , 2 );
   color: white;
   padding: 4px 6px;
   border-radius: 8px;
