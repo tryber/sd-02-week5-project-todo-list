@@ -16,20 +16,20 @@ function removeTudo() {
 
 function salvar() {
   const botaoSalvar = document.getElementById('salvar');
-    botaoSalvar.addEventListener('click', function() {
+  botaoSalvar.addEventListener('click', function () {
     localStorage.clear();
     let li = document.querySelectorAll('.item');
-    for (let i = 0; i < li.length; i++) {
-        localStorage.setItem(i, li[i].innerHTML + ' ' + li[i].style.textDecoration)
+    for (let i = 0; i < li.length; i+=1) {
+      localStorage.setItem(i, li[i].innerHTML + ' ' + li[i].style.textDecoration);
     }
-  })
+  });
 }
 function recupera() {
   let li = localStorage.length;
-  for (let j = 0; j < li ; j++) {
-    let criarLi = document.createElement('li');
+  for (let j = 0 ; j < li ; j+=1) {
+    const criarLi = document.createElement('li');
     let novaString = localStorage.getItem(j);
-    let novoArranjo = novaString.split(' ');
+    const novoArranjo = novaString.split(' ');
     criarLi.innerHTML = novoArranjo[0];
     criarLi.style.textDecoration = novoArranjo[1];
     criarLi.className = 'item';
@@ -72,7 +72,7 @@ function moveCima() {
   });
 }
 
-function moveBaixo(){
+function moveBaixo (){
   const botaoBaixo = document.getElementById('moveBaixo');
   botaoBaixo.addEventListener('mouseup', function () {
     let movido = document.querySelector('.destaca');
@@ -87,12 +87,11 @@ function moveBaixo(){
   });
 }
 
-function removeSelecao(){
+function removeSelecao (){
   const remover = document.getElementById('remove');
   remover.addEventListener('click', function() {
     let movido = document.querySelector('.destaca');
     pegaOl.removeChild(movido);
-
   });
 }
 
