@@ -59,3 +59,12 @@ function eliminarItensRiscados() {
     } else {}
   }
 }
+
+let botaoEliminarTudo = document.getElementById("eliminarTudo");
+botaoEliminarTudo.addEventListener('click', eliminarTudo);
+function eliminarTudo() {
+  let item = document.getElementsByClassName("item");
+  for(let element5 of item) {  
+      element5.remove();
+  }
+}
