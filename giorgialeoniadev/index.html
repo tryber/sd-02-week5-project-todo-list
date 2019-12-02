@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>"Minha Lista de Tarefas"</title>
+    <title>Minha Lista de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="topo"><h1 class="titulo">Minha lista de tarefas</h1>
+    <header class="topo">
+        <h1 class="titulo">Minha lista de tarefas</h1>
     </header>
     <section class="quadro">
-    <p class="explica">
-        Digite o item e clique em adicionar.
-        Clique duas vezes na tarefa para marcá-la como realizada.
-    </p>
-    <div class="add">
-        <input id="input">
-        <button class="botaoAdicionar">Adicionar esta tarefa</button>
-    </div>
-    <ol class="lista"></ol>
+        <p class="explica">
+            Digite o item e clique em adicionar.
+            Clique duas vezes na tarefa para marcá-la como realizada.
+        </p>
+        <div class="add">
+            <input type="text" id="input">
+            <button class="botaoAdicionar">Adicionar esta tarefa</button>
+        </div>
+        <ol class="lista">
+        </ol>
 
-</section>
+    </section>
 
-    <footer class="rodape"><p id="fim">Página desenvolvida por Giorgia Leonia em NOV/2019</p></footer>
+    <script src="script.js"></script>
+
+    <footer class="rodape">
+        <p id="fim">Página desenvolvida por Giorgia Leonia em NOV/2019</p>
+    </footer>
 </body>
+
 </html>
