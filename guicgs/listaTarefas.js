@@ -47,12 +47,32 @@ function riscarItem() {
   }
 }
 
+// let botaoDescerItem = document.getElementById("setaBaixo");
+// botaoDescerItem = addEventListener('click', descerItem);
+// function descerItem() {
+//   for(let element3 of itemSelecionado) {
+//     if(element3.style.backgroundColor == "rgb(189, 189, 189)") {
+//       let parent = element3.parentNode;
+//       let prev = element3.previousSibling;
+//       let oldChild = parent.removeChild(element3);
+//       parent.insertBefore(oldChild, prev.nextSibling);
+//     }
+//   }
+// }
+
 let botaoSubirItem = document.getElementById("setaCima");
 botaoSubirItem = addEventListener('click', subirItem);
 function subirItem() {
   for(let element3 of itemSelecionado) {
     if(element3.style.backgroundColor == "rgb(189, 189, 189)") {
-      document.getElementById("lista").appendChild(element3.previousElementSibling);
+      let pai = element3.parentNode;
+      if (element3 == pai.firstChild) {}
+      else {
+      let parent = element3.parentNode;
+      let prev = element3.previousSibling;
+      let oldChild = parent.removeChild(element3);
+      parent.insertBefore(oldChild, prev);
+      }
     }
   }
 }
