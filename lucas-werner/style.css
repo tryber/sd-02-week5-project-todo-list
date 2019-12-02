@@ -1,11 +1,10 @@
 body {
-    background-color: rgb(47, 165, 53);    
+    background-color: rgb(47, 165, 53); 
 }
-
 #container {
-    padding: 15px;
-    border-radius: 15px;
-    background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
 }
 
 button {
