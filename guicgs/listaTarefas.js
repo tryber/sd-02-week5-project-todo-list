@@ -47,24 +47,42 @@ function riscarItem() {
   }
 }
 
+let botaoSubirItem = document.getElementById("setaCima");
+botaoSubirItem = addEventListener('click', subirItem);
+function subirItem() {
+  for(let element3 of itemSelecionado) {
+    if(element3.style.backgroundColor == "rgb(189, 189, 189)") {
+      document.getElementById("lista").appendChild(element3.previousElementSibling);
+    }
+  }
+}
+
+let botaoRemoverItem = document.getElementById("removerItem");
+botaoRemoverItem.addEventListener('click', removerItem);
+function removerItem() {
+  for(let element4 of itemSelecionado) {
+    if(element4.style.backgroundColor == "rgb(189, 189, 189)") {
+        element4.remove();
+    }
+  }
+}
+
 let botaoEliminarRiscados = document.getElementById("limparCumpridas");
 botaoEliminarRiscados.addEventListener('click', eliminarItensRiscados);
 function eliminarItensRiscados() {
-  let itemRiscado = document.getElementsByClassName("item");
-  for(let element4 of itemRiscado) {  
-    if(element4.style.textDecoration == "line-through") {
-      console.log(element4)
-      element4.remove();
-      
-    } else {}
+  let itemRiscado = document.querySelectorAll(".item");
+  for(let element5 of itemRiscado) {  
+    if(element5.style.textDecoration == "line-through") {
+      element5.remove();
+    }
   }
 }
 
 let botaoEliminarTudo = document.getElementById("eliminarTudo");
 botaoEliminarTudo.addEventListener('click', eliminarTudo);
 function eliminarTudo() {
-  let item = document.getElementsByClassName("item");
-  for(let element5 of item) {  
-      element5.remove();
+  let item = document.querySelectorAll(".item");
+  for(let element6 of item) {  
+      element6.remove();
   }
 }

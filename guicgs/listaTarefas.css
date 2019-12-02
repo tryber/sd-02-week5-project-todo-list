@@ -1,5 +1,6 @@
 * {
   font-family: Ubuntu , sans-serif;
+  text-align: center;
 }
 
 button {
@@ -8,4 +9,6 @@ button {
 
 li {
   cursor: crosshair;
+  text-align: left;
+  margin-left: 30%;
 }
