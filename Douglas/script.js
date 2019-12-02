@@ -22,18 +22,16 @@ function risca(criaLi) {
 
 function marca(criaLi) {
   criaLi.addEventListener('click', function () {
-    let destacado = document.querySelectorAll('.destaca');
-    if( destacado[0] == event.target ) {
+    const destacado = document.querySelectorAll('.destaca');
+    if (destacado[0] === event.target) {
       event.target.classList.toggle('destaca');
-    }
-    else if( destacado[0] != undefined) {
+    } else if (destacado[0] !== undefined) {
       destacado[0].className = '';
       event.target.classList.toggle('destaca');
-    }
-    else {
+    } else {
       criaLi.classList.toggle('destaca');
     }
-})
+  });
 }
 
 function adicionaLinha(argumento) {
