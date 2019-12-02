@@ -49,6 +49,30 @@ function moveCima() {
   });
 }
 
+function moveBaixo(){
+  const botaoBaixo = document.getElementById('moveBaixo');
+  botaoBaixo.addEventListener('mouseup', function () {
+    let movido = document.querySelector('.destaca');
+    const itens = movido.nextSibling;
+    if (itens === null) {
+      alert('A ultima posição não Desce!')
+    } else {
+      let auxiliar = movido.innerHTML;
+      movido.innerHTML = itens.innerHTML;
+      itens.innerHTML = auxiliar;
+    }
+  });
+}
+
+function removeSelecao(){
+  const remover = document.getElementById('remove');
+  remover.addEventListener('click', function(){
+    let movido = document.querySelector('.destaca');
+    pegaOl.removeChild(movido);
+
+  })
+}
+
 function adicionaLinha(argumento) {
   if (argumento === '') {
     alert('Você deve adicionar alguma informação!');
@@ -60,7 +84,6 @@ function adicionaLinha(argumento) {
     entrada.value = '';
     risca(criaLi);
     marca(criaLi);
-    moveCima();
   }
 }
 
@@ -95,4 +118,7 @@ window.onload = function inicia() {
   trocaMouse();
   removeTudo();
   apagaRiscado();
+  moveCima();
+  moveBaixo();
+  removeSelecao();
 };
