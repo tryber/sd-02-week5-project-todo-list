@@ -41,6 +41,7 @@ section{
   word-break: normal;
   border: 1px gray;
   border-top-style: dotted;
+  padding-left: 5px;
 }
 .tarefa-aberta:hover{
   background-color: #ffff99;

@@ -17,6 +17,7 @@ let lista = document.querySelector('#tarefas');
 let tarefaAberta = document.querySelector('.tarefa-aberta');
 
 moveCima.onload = desabilitaSetas(true);
+moveBaixo.onload = desabilitaSetas(true);
 
 //adiciona a tarefa
 criaTarefa.addEventListener("click", adicionaTarefa)
@@ -110,5 +111,4 @@ removeCumprido.addEventListener("click", function() {
     }else{
       desabilitaSetas(true)
     }}
-
 });
