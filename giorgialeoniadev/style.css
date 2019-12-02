@@ -43,3 +43,15 @@ body {
     color: rgb(92, 148, 110)
 }
 
+.botaoAdicionar {
+    cursor: pointer;
+}
+
+.itemSelecionado {
+    font-weight: bold;
+}
+
+.itemFeito {
+    text-decoration: line-through;
+    color: gray;
+}
