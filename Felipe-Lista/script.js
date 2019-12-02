@@ -1,37 +1,31 @@
 // Adiciona Item na Lista
 
-let textoFormulario = document.querySelector('#textoFormulario')
-let botaoEnviar = document.querySelector('#botaoEnviar')
-let elementoAtual = document.querySelectorAll('ol')
+let textoFormulario = document.querySelector('#textoFormulario');
+let botaoEnviar = document.querySelector('#botaoEnviar');
+const elementoAtual = document.querySelector('ol');
+let itemSelecionado=document.querySelectorAll('li');
 let conteudoElemento;
-let lista
-
+let lista;
+var numero=0
 let listaAtual = document.querySelectorAll('.listaTarefas')
 let listaIndividual;
+function itemListaPreenchido(){
+    let novoElemento = document.createElement('li');
+    novoElemento.className = "itemLista";
+    novoElemento.onclick = function() { novoElemento.style };
+    novoElemento.innerText = textoFormulario.value;
+    elementoAtual.appendChild(novoElemento);
+    textoFormulario.value = '';
+    textoFormulario.focus();
+    numero+=1
+    console.log(numero)
 
-function itemListaPreenchido(event){
-    event.preventDefault()
-    novoElemento = document.createElement('li')
-    novoElemento.className = "itemLista"
-    novoElemento.innerText = textoFormulario.value
-    elementoAtual[0].appendChild(novoElemento)
-    textoFormulario.value = "";
-
+    itemSelecionado=document.querySelectorAll('li')
+    //itemSelecionado = document.querySelectorAll('li')
 }
 
-elementoAtual.forEach(elemento => {
-    elemento.onclick = () => {
-        let click = elementoAtual[0].getElementsByClassName('itemLista')
-        console.log(click)
-    } 
-  })
+botaoEnviar.addEventListener ( 'click', itemListaPreenchido );
 
-function adicionaClasse (event){
-
-}
-
-botaoEnviar.addEventListener ( 'click', itemListaPreenchido )
-
-// Seleciona Item da Lista
-
-
+// itemSelecionado.addEventListener('click',function(e){
+//  console.log(e)
+// });

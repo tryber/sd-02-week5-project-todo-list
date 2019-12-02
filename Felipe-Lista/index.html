@@ -15,22 +15,23 @@
     </header>
     <article>
         <h2>Insira sua tarefa</h2>
-        <form class="caixaFormulario" onsubmit="return itemListaPreenchido(event)")>
+        
             <input type="text" id="textoFormulario">
-            <button type="button" id="botaoEnviar">Enviar</button>
+            <button id="botaoEnviar">Enviar</button>
 
-        </form>
+        
 
         <ol id="listaTarefas">
+            
         </ol>
 <hr>
         <h1>Configurações</h1>
         <nav class="menuConfiguracao">
-            <button>Apagar</button>
-            <button>Subir</button>
-            <button>Descer</button>
-            <button>Apagar Tudo</button>
-            <button>Salvar</button>
+            <button id="apagarSelecionado">Apagar Selecionado</button>
+            <button id="subir">Subir</button>
+            <button id="descer">Descer</button>
+            <button id="apagarTudo">Apagar Tudo</button>
+            <button id="salvar">Salvar</button>
         </nav>
     </article>
     <br>
