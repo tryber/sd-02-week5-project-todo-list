@@ -16,7 +16,7 @@ body{
     border-radius: 10px;
     width: 700px;
     padding: 10px 20px;
-    margin-top: 150px;
+    margin-top: 90px;
     background-color: rgba(255, 255, 240, 0.575);
 }
 
@@ -29,7 +29,11 @@ h1{
 p{
    font-style: italic;
    color: rgb(22, 20, 20);
-   font-size: 1.2em;
+   font-size: 1.1em;
+}
+
+p, h1{
+    font-family: Verdana, sans-serif;
 }
 
 #paragrafo-2{
@@ -57,11 +61,15 @@ p{
     background: gray;
 }
 
+#lista .selecionado{
+    background-color: #4169E1;
+}
+
 #botoes{
     margin-top: 40px;
 }
 
-#excluir{
+#para-cima{
     margin-left: 0;
 }
 
@@ -82,7 +90,54 @@ button{
     border-style: none;
 }
 
+button img{
+    width: 10px;
+}
 
+#adiciona-item, #limpar-completos{
+    background-color: #4169E1;
+}
+
+#adiciona-item:hover, #limpar-completos:hover{
+    background-color:  rgb(101, 129, 212);
+    cursor: pointer;
+}
+
+#excluir-selecao, #limpar-lista{
+    background-color: rgb(182, 41, 41);
+}
+
+#excluir-selecao:hover, #limpar-lista:hover{
+    background-color: rgb(185, 62, 62);
+    cursor: pointer;
+}
+
+#desfazer-selecao{
+    background-color: rgb(190, 190, 30);
+}
+
+#desfazer-selecao:hover{
+    background-color: rgb(182, 202, 100);
+    cursor: pointer;
+}
+
+#para-cima, #para-baixo{
+    background-color: rgb(47,79,79);
+}
+
+#para-cima:hover, #para-baixo:hover{
+    background-color: rgb(92, 102, 102);
+    cursor: pointer;
+}
+
+#salvar-lista{
+    background-color: rgb(0,100,0);
+}
+
+#salvar-lista:hover{
+    background-color: rgb(41, 119, 41);
+    cursor: pointer;
+}
     
 
 
