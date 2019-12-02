@@ -14,6 +14,7 @@ function criaTarefa() {
         const novaTarefa = document.createElement("li");
         novaTarefa.append(entrada);
         document.getElementsByTagName("ol")[0].append(novaTarefa);
+        input.value = "";
     }
 }
 
