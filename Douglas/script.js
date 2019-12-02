@@ -13,6 +13,29 @@ function removeTudo() {
   });
 }
 
+
+function salvar() {
+  const botaoSalvar = document.getElementById('salvar');
+    botaoSalvar.addEventListener('click', function() {
+    localStorage.clear();
+    let li = document.querySelectorAll('.item');
+    for (let i = 0; i < li.length; i++) {
+        localStorage.setItem(i, li[i].innerHTML + ' ' + li[i].style.textDecoration)
+    }
+  })
+}
+function recupera() {
+  let li = localStorage.length;
+  for (let j = 0; j < li ; j++) {
+    let criarLi = document.createElement('li');
+    let novaString = localStorage.getItem(j);
+    let novoArranjo = novaString.split(' ');
+    criarLi.innerHTML = novoArranjo[0];
+    criarLi.style.textDecoration = novoArranjo[1];
+    criarLi.className = 'item';
+    pegaOl.appendChild(criarLi);
+  }
+}
 function risca(criaLi) {
   criaLi.addEventListener('dblclick', function () {
     criaLi.classList.toggle('risca');
@@ -66,11 +89,11 @@ function moveBaixo(){
 
 function removeSelecao(){
   const remover = document.getElementById('remove');
-  remover.addEventListener('click', function(){
+  remover.addEventListener('click', function() {
     let movido = document.querySelector('.destaca');
     pegaOl.removeChild(movido);
 
-  })
+  });
 }
 
 function adicionaLinha(argumento) {
@@ -121,4 +144,6 @@ window.onload = function inicia() {
   moveCima();
   moveBaixo();
   removeSelecao();
+  salvar();
+  recupera();
 };
