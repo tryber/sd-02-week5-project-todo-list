@@ -1,0 +1,11 @@
+* {
+  font-family: Ubuntu , sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  cursor: crosshair;
+}
