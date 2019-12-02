@@ -38,31 +38,30 @@ function moveCima() {
   const botaoCima = document.getElementById('moveCima');
   botaoCima.addEventListener('click', function () {
     let movido = document.querySelector('.destaca');
-    let itens = movido.previousSibling;
-    if (itens.innerHTML === undefined){
+    const itens = movido.previousSibling;
+    if (itens.innerHTML === undefined) {
       alert('A primeira posição não sobe, ela ja esta em primeiro !!!');
-    }else{
+    } else {
       let auxiliar = itens.innerHTML;
       itens.innerHTML = movido.innerHTML;
       movido.innerHTML = auxiliar;
     }
-  })
+  });
 }
 
 function adicionaLinha(argumento) {
-
- if (argumento === ''){
-   alert('Você deve adicionar alguma informação!');
- }else{
-  const criaLi = document.createElement('li');
-  pegaOl.appendChild(criaLi);
-  criaLi.innerText = argumento;
-  criaLi.classList = ('class', 'item');
-  entrada.value = '';
-  risca(criaLi);
-  marca(criaLi);
-  moveCima();
- }
+  if (argumento === '') {
+    alert('Você deve adicionar alguma informação!');
+  } else {
+    const criaLi = document.createElement('li');
+    pegaOl.appendChild(criaLi);
+    criaLi.innerText = argumento;
+    criaLi.classList = ('class', 'item');
+    entrada.value = '';
+    risca(criaLi);
+    marca(criaLi);
+    moveCima();
+  }
 }
 
 function click() {
