@@ -6,6 +6,7 @@ const apagaTudo = document.getElementById('apagarTudo');
 const apagaRealizado = document.getElementById('apagarCompletos');
 let apaga = document.querySelectorAll('.risca');
 
+
 function removeTudo() {
   apagaTudo.addEventListener('click', function () {
     const pegandoOl = document.querySelector('ol');
@@ -19,19 +20,18 @@ function salvar() {
   botaoSalvar.addEventListener('click', function () {
     localStorage.clear();
     let li = document.querySelectorAll('.item');
+
     for (let i = 0; i < li.length; i+=1) {
-      localStorage.setItem(i, li[i].innerHTML + ' ' + li[i].style.textDecoration);
+      localStorage.setItem(i, li[i].innerHTML);
     }
   });
 }
-function recupera() {
+function recupera(criaLi) {
   let li = localStorage.length;
   for (let j = 0 ; j < li ; j+=1) {
     const criarLi = document.createElement('li');
     let novaString = localStorage.getItem(j);
-    const novoArranjo = novaString.split(' ');
-    criarLi.innerHTML = novoArranjo[0];
-    criarLi.style.textDecoration = novoArranjo[1];
+    criarLi.innerHTML = novaString;
     criarLi.className = 'item';
     pegaOl.appendChild(criarLi);
   }
