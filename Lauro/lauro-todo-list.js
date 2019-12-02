@@ -27,17 +27,20 @@ digitaTexto.addEventListener('keyup',function(event){
 });
 
 function adicionaTarefa() {
-  let tarefa = document.createElement('div');
-  tarefa.setAttribute ('class', 'tarefa-aberta');
-  tarefa.innerHTML = digitaTexto.value;
-  tarefas.appendChild(tarefa);
-  if(document.querySelectorAll('.tarefa-aberta').length >= 2) { 
-    desabilitaSetas(false)
+  if (digitaTexto.value == 0){
+    alert ('Por favor, digite uma tarefa.');
   }else{
-    desabilitaSetas(true)
-  }
-  digitaTexto.value=null;
-};
+    let tarefa = document.createElement('div');
+    tarefa.setAttribute ('class', 'tarefa-aberta');
+    tarefa.innerHTML = digitaTexto.value;
+    tarefas.appendChild(tarefa);
+    if(document.querySelectorAll('.tarefa-aberta').length >= 2) { 
+      desabilitaSetas(false)
+    }else{
+      desabilitaSetas(true)
+    }
+    digitaTexto.value=null;
+  }};
 
 // //riscar item com duplo clique
 lista.addEventListener('dblclick', function(event){
@@ -82,24 +85,30 @@ moveBaixo.addEventListener('click', function(clicada){
 
 //apaga todas as tarefas
 removeTarefa.addEventListener("click", function() {
-  let listaDeTarefas = document.querySelector('#tarefas');
-  while (listaDeTarefas.firstChild) {
-    listaDeTarefas.removeChild(listaDeTarefas.firstChild)
-  }
-    desabilitaSetas(true);
-})
+  if (document.querySelectorAll('.tarefa-aberta').length == 0){
+    alert ('A sua lista está vazia.');
+  }else{
+    let listaDeTarefas = document.querySelector('#tarefas');
+    while (listaDeTarefas.firstChild) {
+      listaDeTarefas.removeChild(listaDeTarefas.firstChild)
+    }
+      desabilitaSetas(true);
+  }})
 
 //apaga só as cumpridas
 removeCumprido.addEventListener("click", function() {
-  tarefa = document.querySelectorAll('.cumprido');
-  tamanhoLista = document.querySelectorAll('.cumprido').length
-  for (i=0; i < tamanhoLista;i++){
-    tarefa[i].remove()
-}
-  if(document.querySelectorAll('.tarefa-aberta').length >= 2) { 
-    desabilitaSetas(false)
+  if (tamanhoLista = document.querySelectorAll('.cumprido').length == 0){
+    alert ('Não há tarefas cumpridas');
   }else{
-    desabilitaSetas(true)
+    tarefa = document.querySelectorAll('.cumprido');
+    tamanhoLista = document.querySelectorAll('.cumprido').length
+    for (i=0; i < tamanhoLista;i++){
+      tarefa[i].remove()
   }
+    if(document.querySelectorAll('.tarefa-aberta').length >= 2) { 
+      desabilitaSetas(false)
+    }else{
+      desabilitaSetas(true)
+    }}
 
 });
