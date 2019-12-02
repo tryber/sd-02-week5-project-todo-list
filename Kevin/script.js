@@ -1,12 +1,13 @@
 window.onload = function () {
-    let todoItems = [];
+  let todoItems = localStorage.getItem('TODO') ? JSON.parse(localStorage.getItem('TODO')) : [];
 
-    function addTodo(text) {
-      const todo = {
-        text,
-        checked: false,
-        id: Date.now(),
-      };
+ 
+  function addTodo(text) {
+    const todo = {
+      text,
+      checked: false,
+      id: Date.now(),
+    };
 
   todoItems.push(todo);
 
@@ -21,7 +22,9 @@ window.onload = function () {
       </button>
     </li>
   `);
+ 
 }
+  
 
     function toggleDone(key) {
       const index = todoItems.findIndex(item => item.id === Number(key));
@@ -56,9 +59,10 @@ function deleteTodo(key) {
         addTodo(text);
         input.value = '';
         input.focus();
+        localStorage.setItem("TODO", JSON.stringify(todoItems));
+        
       }
     });
-
     const addBtn = document.querySelector('.addBtn');
     addBtn.addEventListener('click', event => {
       event.preventDefault();
@@ -72,9 +76,12 @@ function deleteTodo(key) {
         addTodo(text);
         input.value = '';
         input.focus();
+        localStorage.setItem("TODO", JSON.stringify(todoItems));
     }}
     );
 
+
+    
     const list = document.querySelector('.js-todo-list');
     list.addEventListener('click', event => {
       if (event.target.classList.contains('js-tick')) {
@@ -89,13 +96,13 @@ function deleteTodo(key) {
 
     });
     list.addEventListener('dblclick', event => {
-      if (event.target.classList.contains ('li')) {
+      if (event.target.classList.contains('li')) {
         event.target.parentNode.classList.toggle('done');
       }
     })
 
     list.addEventListener('click', event => {
-      if (event.target.classList.contains ('li')) {
+      if (event.target.classList.contains('li')) {
         event.target.classList.toggle('selected');
       }
     })
@@ -124,4 +131,5 @@ function deleteTodo(key) {
   const clearDone = document.querySelector('#clear-done');
   clearDone.addEventListener('click', removeChecked);
 
+  
 }
