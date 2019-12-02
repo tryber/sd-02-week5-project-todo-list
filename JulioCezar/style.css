@@ -2,3 +2,12 @@
   width: auto;
   height: auto;
 }
+
+.lista_tarefas {  
+  width: fit-content;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: darkgray;
+}
