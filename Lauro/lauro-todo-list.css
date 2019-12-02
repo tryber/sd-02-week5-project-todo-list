@@ -31,7 +31,7 @@ section{
   border-radius: 5px;
   width: 450px;
   min-height: 20px;
-  max-height: 100px;
+  max-height: 300px;
   overflow:auto;
 
 }
@@ -44,7 +44,6 @@ section{
 .clicada{
   background-color:#ffff99;
   width: 500px;
-  opacity: 0.5;
 }
 button{
   background-color: #454545;
