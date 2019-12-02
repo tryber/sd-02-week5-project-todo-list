@@ -53,10 +53,10 @@ botaoDescerItem.addEventListener('click', descerItem);
 function descerItem() {
   for(let element3 of itemSelecionado) {
     if(element3.style.backgroundColor == "rgb(189, 189, 189)") {
-      let pai = element3.parentNode;
-      if (element3 == pai.lastChild) {}
-      else {
-      pai.insertBefore(element3.nextElementSibling, element3);
+        let pai = element3.parentNode;
+        if (element3 == pai.lastChild) {}
+    else {
+        pai.insertBefore(element3.nextElementSibling, element3);
       }
     }
   }
