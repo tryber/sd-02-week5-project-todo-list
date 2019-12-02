@@ -8,6 +8,11 @@ function iniciar() {
     apagarListaBtn.addEventListener('click', function () {
         apagaTodasTarefas();
     });
+
+    const apagarConcluidosBtn = document.querySelector("#apagarConcluidosBtn");
+    apagarConcluidosBtn.addEventListener('click', function () {
+        apagarConcluidos();
+    });
 }
 
 function pegaListaDoHtml() {
@@ -33,6 +38,15 @@ function criaTarefa() {
 function apagaTodasTarefas() {
     const listaCompleta = pegaListaDoHtml();
     listaCompleta.innerHTML = "";
+}
+
+function apagarConcluidos() {
+    const items = document.getElementsByTagName("li");
+    for (const item of items){
+        if(item.className === "itemFeito"){
+            item.remove();
+        } 
+    }
 }
 
 function selecionaItem(event) {
