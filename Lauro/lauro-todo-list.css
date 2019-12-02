@@ -1,9 +1,9 @@
 body{
-  font-family:sans-serif;
   background-image:url(ashley-edwards-zwmkMkJ2Qi4-unsplash.jpg);
   background-size:cover;
   background-repeat:no-repeat;
   overflow:auto;
+  font-family: 'Solway', serif;
 }
 h1{
   text-align: center;
@@ -41,9 +41,11 @@ section{
   border: 1px gray;
   border-top-style: dotted;
 }
+.tarefa-aberta:hover{
+  background-color: #99ebff;
+}
 .clicada{
   background-color:#ffff99;
-  width: 500px;
 }
 button{
   background-color: #454545;
@@ -54,14 +56,14 @@ button{
   text-decoration: none;
   display: inline;
   font-size: 16px;
+  font-family: 'Solway', serif;
 /*-webkit-appearence:button;*/
 }
 button:disabled{
-  background-color: #f2f2f2;
+  background-color: #D8D6D9;
 }
 .cumprido{
  text-decoration: line-through;
- background-color:#454545; 
- width: 500px;
+ background-color:#454545;
  opacity:0.5;
 }

@@ -14,6 +14,8 @@ let digitaTexto = document.querySelector('#digita-texto');
 
 let lista = document.querySelector('#tarefas');
 
+let tarefaAberta = document.querySelector('.tarefa-aberta');
+
 moveCima.onload = desabilitaSetas(true);
 
 //adiciona a tarefa
