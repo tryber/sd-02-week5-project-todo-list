@@ -1,35 +1,50 @@
 function iniciar() {
-    const botao = document.querySelector(".botaoAdicionar");
-    botao.addEventListener('click', function () {
+    const adicionarBtn = document.querySelector("#adicionarBtn");
+    adicionarBtn.addEventListener('click', function () {
         criaTarefa();
-    })
+    });
+
+    const apagarListaBtn = document.querySelector("#apagarListaBtn");
+    apagarListaBtn.addEventListener('click', function () {
+        apagaTodasTarefas();
+    });
+}
+
+function pegaListaDoHtml() {
+    return document.getElementsByTagName("ol")[0];
 }
 
 function criaTarefa() {
     const input = document.querySelector("#input");
     const entrada = input.value;
-    if (entrada.trim() === ""){
+    if (entrada.trim() === "") {
         alert("Por favor, digite um texto para sua tarefa.");
     } else {
         const novaTarefa = document.createElement("li");
         novaTarefa.append(entrada);
         novaTarefa.onclick = selecionaItem;
         novaTarefa.ondblclick = itemFeito;
-        document.getElementsByTagName("ol")[0].append(novaTarefa);
+        const listaCompleta = pegaListaDoHtml();
+        listaCompleta.append(novaTarefa);
         input.value = "";
     }
 }
 
+function apagaTodasTarefas() {
+    const listaCompleta = pegaListaDoHtml();
+    listaCompleta.innerHTML = "";
+}
+
 function selecionaItem(event) {
-    if (event.target.className === ""){
+    if (event.target.className === "") {
         event.target.className = "itemSelecionado"
     } else if (event.target.className === "itemSelecionado") {
         event.target.className = ""
     }
 }
 
-function itemFeito (event) {
-    if (event.target.className !== "itemFeito"){
+function itemFeito(event) {
+    if (event.target.className !== "itemFeito") {
         event.target.className = "itemFeito"
     } else if (event.target.className === "itemFeito") {
         event.target.className = ""

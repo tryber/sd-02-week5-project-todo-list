@@ -43,7 +43,7 @@ body {
     color: rgb(92, 148, 110)
 }
 
-.botaoAdicionar {
+button {
     cursor: pointer;
 }
 
@@ -54,4 +54,8 @@ body {
 .itemFeito {
     text-decoration: line-through;
     color: gray;
+}
+
+#apagarListaBtn {
+
 }
