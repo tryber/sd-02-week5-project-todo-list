@@ -1,4 +1,3 @@
-//2 Botoes sem funcionalidade
 const ok = document.getElementById('envia');
 const entrada = document.getElementById('entrada');
 const pegaOl = document.querySelector('ol');
