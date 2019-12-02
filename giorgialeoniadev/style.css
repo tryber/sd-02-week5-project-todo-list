@@ -6,13 +6,12 @@ body {
 
 .titulo {
     text-align: center;
-    color: rgb(92, 148, 110)
+    color: rgb(92, 148, 110);
 }
 
 .explica {
-    text-align: center;
-    color: rgb(92, 148, 110)
-
+    text-align: justify;
+    color: rgb(42, 45, 52);
 }
 
 .quadro {
@@ -28,6 +27,7 @@ body {
 
 #input {
     border-radius: 8px;
+    padding: 4px 6px;
 }
 
 .rodape {
@@ -45,6 +45,17 @@ body {
 
 button {
     cursor: pointer;
+    background:  rgb(42, 45, 52);
+    color: white;
+    padding: 4px 6px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: rgb(70, 75, 87);
 }
 
 .itemSelecionado {
@@ -54,8 +65,4 @@ button {
 .itemFeito {
     text-decoration: line-through;
     color: gray;
-}
-
-#apagarListaBtn {
-
 }
