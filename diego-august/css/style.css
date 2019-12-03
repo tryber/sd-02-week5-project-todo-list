@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0; padding: 0;
+}
+
+/* overlay que era pra dar um efeitão e cagou foi tudo HDSAUHDSUAHDSA */
+/* #overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position:fixed;
+  width: 1000vh;
+  height: 1000vh;
+  z-index: 10;
+} */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* fazer a lista de itens não selecionável */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Escurecer a cor do background ao passar o mouse */
+ul li:hover {
+  background: #FFD05B;
+}
+
+/* Quando clicado, adicionar uma cor de fundo e riscar o texto*/
+ul li.checked {
+  background: #F96F57;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Adicione uma marca "checked" ao clicar no item */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Estilo do botão de excluir*/
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #4CDBC4;
+  color: white;
+}
+
+/* Estilo do header */
+.header {
+  background-color: #e3e3e3;
+  padding: 20px 40px;
+  padding-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estilo do input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+/* Estilo do botão "Add" */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #F96F57;
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0 6px 6px 0;
+  font-family: 'Karla', sans-serif;
+}
+
+.addBtn:hover {
+  background-color: #d45d48;
+}
+#logoPos {
+  position: absolute;
+  left: 2%;
+  top: 0.5%;
+  width: 200px;
+
+}
+#iconPosition {
+  width: 45px;
+  left: 30px;
+  position: absolute;
+}
+.focusTittle {
+  font-size: 25px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 100;
+  color: #F96F56;
+  margin-left: 15px;
+  margin-top: 7px;
+}
+.focusSubTittle {
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  font-weight: lighter;
+  position: absolute;
+  top: 35%;
+  color: black;
+}
+#myUL {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: thin;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #E3E3E3;
+  position: absolute;
+  left: 40%;
+  font-family: 'Titillium Web', sans-serif;
+}
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  border-bottom: 2px solid #F96F57;
+  color: black;
+}
+
+.topnav a.active {
+  border-bottom: 2px solid #F96F57;
+  color: black;
+}
