@@ -39,13 +39,24 @@ function apagarLista() {
   }
 }
 
+function selecionarTarefa() {
+  const listaTexto = event.target;
+  if (listaTexto.style.backgroundColor === 'red') {
+    listaTexto.style.backgroundColor = 'none';
+  } else {
+    listaTexto.style.backgroundColor = 'red';
+  }
+}
+
 window.onload = function start() {
   const buttonAdd = document.getElementById('button_tarefas');
   buttonAdd.addEventListener('click', adicionar);
   const buttonClear = document.getElementById('button_apagar_lista');
   buttonClear.addEventListener('click', apagarLista);
   const tarefasLi = document.getElementById('ol_content');
+  tarefasLi.addEventListener('click', selecionarTarefa);
   tarefasLi.addEventListener('dblclick', tarefaCompleta);
   const buttonTarefasCompletas = document.getElementById('button_remover_completos');
   buttonTarefasCompletas.addEventListener('click', removerTarefasCompletas);
+  
 };
