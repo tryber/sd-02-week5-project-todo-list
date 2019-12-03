@@ -2,8 +2,29 @@ button {
     cursor: pointer;
 }
 
+body {
+    
+    background-color: cornflowerblue;
+    margin: 0 auto;
+    text-align: center;
+}
 
 li:hover{
     background-color: gray;
     color: rgb(95, 52, 52);
+}
+
+.selecionado {
+    background-color: blue;
+}
+
+.riscado {
+    text-decoration: line-through;
+}
+
+ol {
+    width: 500px;
+    margin: 0 auto;
+    list-style-position: inside;
+    text-align: left;
 }

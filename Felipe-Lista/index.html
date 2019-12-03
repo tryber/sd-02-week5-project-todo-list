@@ -10,21 +10,23 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Lista de Tarefas</h1>
+            <h1>Lista de Tarefas</h1>
     </header>
     <article>
         <h2>Insira sua tarefa</h2>
-        
-            <input type="text" id="textoFormulario">
-            <button id="botaoEnviar">Enviar</button>
+        <p>Clique em enviar para inserir a tarefa</p>
 
-        
+        <input type="text" type="submit" id="textoFormulario">
+        <button id="botaoEnviar">Enviar</button>
 
         <ol id="listaTarefas">
         </ol>
-<hr>
+        <hr>
         <h1>Configurações</h1>
+        <p>Selecione a tarefa e apague a mesma individualmente</p>
+        <p>Ou clique em Apagar Tudo e apague todas as tarefas</p>
         <nav class="menuConfiguracao">
             <button id="apagarSelecionado">Apagar Selecionado</button>
             <button id="subir">Subir</button>
@@ -35,6 +37,7 @@
     </article>
     <br>
     <footer>Lista de Tarefas Criada Por: Felipe Andrade Lima</footer>
+
     <script src="./script.js"></script>
 </body>
 
