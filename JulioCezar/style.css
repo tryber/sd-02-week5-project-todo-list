@@ -1,6 +1,16 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(154, 250, 170);
+  text-align: center;
+}
+
 #ol_content {
+  margin: 50px 80px;  
   width: auto;
   height: auto;
+  border-style: inset;
+  border-radius: 100px;
+  background-color: white;
 }
 
 .lista_tarefas {  
