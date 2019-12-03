@@ -1,28 +1,29 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Todo List</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
-  </head>
-  <body>
-    <div class="container">
-      <p>
-        <label for="new-task">Adicionar item</label><input id="new-task" type="text"><button>Adicionar</button>
-      </p>
+<head>
+<title>Focus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/icon.png" />
+</head>
+<body>
 
-      <h3>Todo</h3>
-      <ul id="incomplete-tasks">
-        <li><input type="checkbox"><label>Pagar as contas</label><input type="text"><button class="edit">Editar</button><button class="delete">Deletar</button></li>
-        <li class="editMode"><input type="checkbox"><label>Fazer compras</label><input type="text" value="Go Shopping"><button class="edit">Editar</button><button class="delete">Deletar</button></li>
+<div id="myDIV" class="header">
+  <span><img id="iconPosition" src="images/icon.png" /></span>
+  <h2 style="margin:5px">e-Todo-list</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Adicionar</span>
+</div>
 
-      </ul>
-
-      <h3>Completado</h3>
-      <ul id="completed-tasks">
-        <li><input type="checkbox" checked><label>Ir ao médico</label><input type="text"><button class="edit">Editar</button><button class="delete">Deletar</button></li>
-      </ul>
-    </div>
-
-    <script type="text/javascript" src="js/main.js"></script>
-
-  </body>
+<ul id="myUL">
+  <li>Tomar Agua</li>
+  <li class="checked">Pagar os boletos</li>
+  <li>Reunião via zoom</li>
+  <li>Comprar cigarro</li>
+  <li>Ler o livro "Ninja Javascript"</li>
+  <li>Organizar a casa</li>
+</ul>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
