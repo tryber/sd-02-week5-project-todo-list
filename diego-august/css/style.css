@@ -3,10 +3,22 @@ body {
   min-width: 250px;
 }
 
-
 * {
   box-sizing: border-box;
 }
+
+html, body {
+  margin: 0; padding: 0;
+}
+
+/* overlay que era pra dar um efeitão e cagou foi tudo HDSAUHDSUAHDSA */
+/* #overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position:fixed;
+  width: 1000vh;
+  height: 1000vh;
+  z-index: 10;
+} */
 
 ul {
   margin: 0;
@@ -35,12 +47,12 @@ ul li:nth-child(odd) {
 
 /* Escurecer a cor do background ao passar o mouse */
 ul li:hover {
-  background: #ddd;
+  background: #FFD05B;
 }
 
 /* Quando clicado, adicionar uma cor de fundo e riscar o texto*/
 ul li.checked {
-  background: #888;
+  background: #F96F57;
   color: #fff;
   text-decoration: line-through;
 }
@@ -68,14 +80,15 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #f44336;
+  background-color: #4CDBC4;
   color: white;
 }
 
 /* Estilo do header */
 .header {
-  background-color: #f44336;
-  padding: 30px 40px;
+  background-color: #e3e3e3;
+  padding: 20px 40px;
+  padding-top: 100px;
   color: white;
   text-align: center;
 }
@@ -95,28 +108,80 @@ input {
   padding: 10px;
   float: left;
   font-size: 16px;
+  border-radius: 6px 0px 0px 6px;
 }
 
 /* Estilo do botão "Add" */
 .addBtn {
   padding: 10px;
   width: 25%;
-  background: #d9d9d9;
-  color: #555;
+  background: #F96F57;
+  color: white;
   float: left;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 0;
+  border-radius: 0 6px 6px 0;
+  font-family: 'Karla', sans-serif;
 }
 
 .addBtn:hover {
-  background-color: #bbb;
+  background-color: #d45d48;
+}
+#logoPos {
+  position: absolute;
+  left: 2%;
+  top: 0.5%;
+  width: 200px;
+
 }
 #iconPosition {
+  width: 45px;
+  left: 30px;
   position: absolute;
-  left: 5%;
-  top: 1%;
-  width: 40px;
+}
+.focusTittle {
+  font-size: 25px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 100;
+  color: #F96F56;
+  margin-left: 15px;
+  margin-top: 7px;
+}
+.focusSubTittle {
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  font-weight: lighter;
+  position: absolute;
+  top: 35%;
+  color: black;
+}
+#myUL {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: thin;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #E3E3E3;
+  position: absolute;
+  left: 40%;
+  font-family: 'Titillium Web', sans-serif;
+}
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  border-bottom: 2px solid #F96F57;
+  color: black;
+}
+
+.topnav a.active {
+  border-bottom: 2px solid #F96F57;
+  color: black;
 }
