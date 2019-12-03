@@ -11,25 +11,33 @@
 
   <body>
     <header>
-      <h1>Lista de Tarefas</h1>
+      <h1>Lista Fácil</h1>
+      <h4>Organize-se :)</h4>
     </header>
-    <section>
-      <p>
-        <em>Clique duas vezes em um item para marcá-lo como completo</em>
-      </p>
+    <section id="consoleLista">
       <div>
+        <p>
+          <em>Clique duas vezes em uma tarefa para marcá-la como cumprida.</em>
+        </p>
+      </div>
+      <div id="caixaAdicao">
         <input type="text" id="texto">
         <button id="adicionar">Adicionar item</button>
       </div>
       <div>
-        <ol id="lista"></ol>
+        <button id="setaCima">⬆</button>
+        <button id="setaBaixo">⬇</button>
+        <button id="removerItem">✕</button>
+        <button id="limparCumpridas">🧹 cumpridas</button>
+        <button id="eliminarTudo">🧹 tudo</button>
+      </div>
+    </section>
+    <section id="listaTarefas">
+      <div>
+        <h2>Lista de Tarefas</h2>
       </div>
       <div>
-        <button id="setaCima">⇡</button>
-        <button id="setaBaixo">⇣</button>
-        <button id="removerItem">Remover item</button>
-        <button id="limparCumpridas">Limpar tarefas cumpridas</button>
-        <button id="eliminarTudo">Limpar toda a lista</button>
+        <ol id="lista"></ol>
       </div>
     </section>
     <script src="listaTarefas.js"></script>

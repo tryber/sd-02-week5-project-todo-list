@@ -1,14 +1,51 @@
 * {
   font-family: Ubuntu , sans-serif;
+}
+
+body {
+  background-image: url("./imagens/fundo.jpg");
+}
+
+header {
   text-align: center;
+}
+
+header h1 {
+  line-height: 0;
+  margin: 2rem 32% 0;
+  border: 1px black dashed;
+  padding: 2rem;
+  background-color: white;
 }
 
 button {
   cursor: pointer;
 }
 
+ol {
+  padding-left: 1rem;
+}
+
 li {
-  cursor: crosshair;
-  text-align: left;
-  margin-left: 30%;
+  cursor: pointer;
+}
+
+#consoleLista {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+#consoleLista p {
+  margin: 0 0 1rem;
+  font-size: .8rem;
+}
+
+#caixaAdicao {
+  margin-bottom: .8rem;
+}
+
+#listaTarefas {
+  display: inline-block;
+  margin: 0 10rem 2rem 5rem;
+  position: absolute;
 }
