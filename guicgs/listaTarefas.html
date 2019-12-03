@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="listaTarefas.css">
+    <title>Lista de Tarefas</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Lista Fácil</h1>
+      <h4>Organize-se :)</h4>
+    </header>
+    <section id="consoleLista">
+      <div>
+        <p>
+          <em>Clique duas vezes em uma tarefa para marcá-la como cumprida.</em>
+        </p>
+      </div>
+      <div id="caixaAdicao">
+        <input type="text" id="texto">
+        <button id="adicionar">Adicionar item</button>
+      </div>
+      <div>
+        <button id="setaCima">⬆</button>
+        <button id="setaBaixo">⬇</button>
+        <button id="removerItem">✕</button>
+        <button id="limparCumpridas">🧹 cumpridas</button>
+        <button id="eliminarTudo">🧹 tudo</button>
+      </div>
+    </section>
+    <section id="listaTarefas">
+      <div>
+        <h2>Lista de Tarefas</h2>
+      </div>
+      <div>
+        <ol id="lista"></ol>
+      </div>
+    </section>
+    <script src="listaTarefas.js"></script>
+  </body>
+
+</html>
