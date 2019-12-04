@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(213, 193, 231);
+    display: flex;
+}
+
+section {
+    text-align: center;
+    border: black solid;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.todosBotoes {
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(200, 85, 85);
+}
+
+li:hover {
+    background-color:  rgb(200, 85, 85);
+}
+
+.todosBotoes:hover {
+    background-color: rgb(220, 105, 105);
+}
+
+.itemLista {
+    text-align: left;
+}
