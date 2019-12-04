@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(47, 165, 53); 
+}
+#container {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+button {
+    cursor: grab
+}
+      
+.highlight {
+    background-color: #FFFF00
+}
+
+.doneItem {
+    text-decoration: line-through;
+}
+
+ol li:hover {
+    background: #ddd;
+  }
