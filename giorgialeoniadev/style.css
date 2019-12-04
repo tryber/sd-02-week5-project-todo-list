@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(42, 45, 52);
+    color: rgb(42, 45, 52);
+    font-family: sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    color: rgb(92, 148, 110);
+}
+
+.explica {
+    text-align: justify;
+    color: rgb(42, 45, 52);
+}
+
+.quadro {
+    background: rgb(128, 194, 175);
+    width: 70%;
+    height: 30%;
+    margin: auto;
+    padding: 8px;
+    text-align: justify;
+    border: 3px dotted rgb(92, 148, 110);
+    border-radius: 20px;
+}
+
+#input {
+    border-radius: 8px;
+    padding: 4px 6px;
+}
+
+.rodape {
+    position: static;
+    margin-top: 30px;
+    border: 3px dotted rgb(92, 148, 110);
+    text-align: center;
+    padding: 3px;
+}
+
+#fim{
+    text-align: center;
+    color: rgb(92, 148, 110)
+}
+
+button {
+    cursor: pointer;
+    background:  rgb(42, 45, 52);
+    color: white;
+    padding: 4px 6px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    height: 25px;
+}
+
+button:hover {
+    background-color: rgb(70, 75, 87);
+}
+
+.itemSelecionado {
+    font-weight: bold;
+}
+
+.itemFeito {
+    text-decoration: line-through;
+    color: gray;
+}
