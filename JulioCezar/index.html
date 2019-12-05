@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <section>
+      <h1>Minha lista de tarefas</h1>
+      <p><em>Lista de tarefas: Clique duas vezes para riscar a tarefa</em></p>
+    </section>
+    <section>
+        <label id="label_content">
+          <input id="input_tarefas" type="text">
+          <button class="btn" id="button_tarefas" type="button">Adicionar</button>
+        </label>
+    </section>
+    <section>
+        <div id="ol_content">
+          <ol id="ol_lista_tarefas"></ol>
+        </div>
+    </section>
+    <section>
+      <label>
+        <button class="btn" id="button_apagar_lista">Apagar lista</button>
+      </label>
+      <label>
+        <button class="btn" id="button_remover_completos">Remover tarefas completas</button>
+      </label>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
