@@ -13,11 +13,15 @@ function adicionar() {
 
 function tarefaCompleta(event) {
   const listaTexto = event.target;
-  if (listaTexto.style.textDecoration === 'line-through') {
-    listaTexto.style.textDecoration = 'none';
-  } else {
-    listaTexto.style.textDecoration = 'line-through';
-  }
+  document.querySelectorAll('.lista_tarefas').forEach(element => {
+    if (listaTexto === element) {
+      if (listaTexto.style.textDecoration === 'line-through') {
+        listaTexto.style.textDecoration = 'none';
+      } else {
+        listaTexto.style.textDecoration = 'line-through';
+      }
+    }
+  });
 }
 
 function removerTarefasCompletas() {
@@ -40,12 +44,16 @@ function apagarLista() {
 }
 
 function selecionarTarefa() {
-  const listaTexto = event.target;
-  if (listaTexto.style.backgroundColor === 'red') {
-    listaTexto.style.backgroundColor = 'none';
-  } else {
-    listaTexto.style.backgroundColor = 'red';
-  }
+  const listaTexto = event.target;  
+  document.querySelectorAll('.lista_tarefas').forEach(element => {
+   if (listaTexto === element){     
+    if (listaTexto.style.backgroundColor === 'red') {      
+      listaTexto.style.backgroundColor = 'white';
+    } else {
+      listaTexto.style.backgroundColor = 'red';
+    }
+   }
+  });
 }
 
 window.onload = function start() {
@@ -53,7 +61,7 @@ window.onload = function start() {
   buttonAdd.addEventListener('click', adicionar);
   const buttonClear = document.getElementById('button_apagar_lista');
   buttonClear.addEventListener('click', apagarLista);
-  const tarefasLi = document.getElementById('ol_content');
+  const tarefasLi = document.getElementById('ol_content');  
   tarefasLi.addEventListener('click', selecionarTarefa);
   tarefasLi.addEventListener('dblclick', tarefaCompleta);
   const buttonTarefasCompletas = document.getElementById('button_remover_completos');
