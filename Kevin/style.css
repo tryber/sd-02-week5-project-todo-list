@@ -1,0 +1,235 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 250px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333;
+  height: 90vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  overflow-y: auto;
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 80px;
+  opacity: 0.5;
+}
+
+svg {
+  width: 64px;
+  height: 64px;
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+ol li:nth-child(odd) {
+  background: #a09f9f;
+}
+
+ol li:hover {
+  background: #ddd;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.done span {
+  text-decoration: line-through;
+  color: #00d;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tick::before {
+  content: '✓';
+  font-size: 20px;
+  display: none;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete-todo svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 3px solid #333;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #bbb;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #d9d9d9;
+}
+
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.checklist-icon {
+  margin-bottom: 20px;
+}
+
+.empty-state__title, .empty-state__description {
+  margin-bottom: 20px;
+}
+
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: flex;
+}
+
+.selected {
+  background-color: lightcoral;
+}
+
+#date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.bottom-buttons {
+  padding: 10px;
+  width: 23%;
+  background: rgb( 59 , 5 , 5 );
+  color: rgb( 197 , 197 , 197 );
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 80%;
+}
+
+.bottom-buttons:hover {
+  background-color: #bb5a5a;
+}
+
+.clear{
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.clear i{
+    font-size: 30px;
+    color: #FFF;
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
