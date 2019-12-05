@@ -19,7 +19,7 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  background-color: darkgray;
+  background-color: rgb(87, 170, 253);
 }
 
 .btn {
