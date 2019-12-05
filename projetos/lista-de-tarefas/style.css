@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(imagens/cup-of-coffee-1280537_1920.jpg);
+    background-size: 100%;
+}
+
+#conteudo-principal{
+    border: 1px solid rgb(255, 255, 240);
+    border-radius: 10px;
+    width: 700px;
+    padding: 10px 20px;
+    margin-top: 90px;
+    background-color: rgba(255, 255, 240, 0.575);
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+p{
+   font-style: italic;
+   color: rgb(22, 20, 20);
+   font-size: 1.1em;
+}
+
+p, h1{
+    font-family: Verdana, sans-serif;
+}
+
+#paragrafo-2{
+    margin-bottom: 20px;
+}
+
+#escrever-adicionar{
+    display: flex;
+}
+
+#lista{
+    margin-top: 40px;
+    margin-left: 17px;
+}
+
+#lista li{
+    line-height: 28px;
+    width: 560px;
+    padding: 0 5px;
+    font-size: 1.2em;
+}
+
+#lista li:hover{
+    cursor: pointer;
+    background: gray;
+}
+
+#lista .selecionado{
+    background-color: #4169E1;
+}
+
+#botoes{
+    margin-top: 40px;
+}
+
+#para-cima{
+    margin-left: 0;
+}
+
+#escreve-item{
+    padding: 7px 0px 7px 5px;
+    width: 250px;
+    font-size: 1em;
+}
+
+#escreve-item::placeholder{
+    font-style: italic;
+}
+
+button{
+    margin-left: 15px;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+button img{
+    width: 10px;
+}
+
+#adiciona-item, #limpar-completos{
+    background-color: #4169E1;
+}
+
+#adiciona-item:hover, #limpar-completos:hover{
+    background-color:  rgb(101, 129, 212);
+    cursor: pointer;
+}
+
+#excluir-selecao, #limpar-lista{
+    background-color: rgb(182, 41, 41);
+}
+
+#excluir-selecao:hover, #limpar-lista:hover{
+    background-color: rgb(185, 62, 62);
+    cursor: pointer;
+}
+
+#desfazer-selecao{
+    background-color: rgb(190, 190, 30);
+}
+
+#desfazer-selecao:hover{
+    background-color: rgb(182, 202, 100);
+    cursor: pointer;
+}
+
+#para-cima, #para-baixo{
+    background-color: rgb(47,79,79);
+}
+
+#para-cima:hover, #para-baixo:hover{
+    background-color: rgb(92, 102, 102);
+    cursor: pointer;
+}
+
+#salvar-lista{
+    background-color: rgb(0,100,0);
+}
+
+#salvar-lista:hover{
+    background-color: rgb(41, 119, 41);
+    cursor: pointer;
+}
+    
+
+
