@@ -1,4 +1,5 @@
 let lista = document.getElementById("lista");
+let itens = document.getElementsByTagName("li");
 let input = document.getElementsByTagName('input')[0];
 let botaoAdicionar = document.getElementById("adicionar");
 let itemASerAdicionado;
@@ -15,8 +16,16 @@ botaoAdicionar.addEventListener('click', function() {
     document.getElementById("lista").appendChild(novoItem);
     input.value = "";
     novoItem.addEventListener('click', function() {
-        this.className = "itemSelecionado";
+        this.classList.add("itemSelecionado");
     })
+    novoItem.addEventListener('dblclick', function() {
+        if (this.classList.contains("itemCompleto")) {
+            this.className = "";
+        } else {
+            this.className = "itemCompleto";
+        }
+    })
+ 
 
 //let textoItem = document.createTextNode("aaaaaaa");
 //document.body.appendChild(novoItem);
@@ -37,3 +46,22 @@ for (let botao of botoes) {
         this.style.cursor = "pointer";
     })
 }
+
+let botaoLimparLista = document.getElementById("limparLista");
+let botaoLimparCompletos = document.getElementById("limparCompletos");
+
+botaoLimparLista.addEventListener('click', function() {
+    lista.innerHTML = "";
+})
+
+botaoLimparCompletos.addEventListener('click', function() {
+    for (let i = itens.length - 1; i >= 0; i--) {
+        if (itens[i].classList.contains("itemCompleto")) {
+            itens[i].parentNode.removeChild(itens[i]);
+            console.log(i);
+        }
+    }
+    //if () {
+      //  item.parentNode.removeChild(item);
+    //}
+})
