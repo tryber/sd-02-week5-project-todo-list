@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Gerenciador de tarefas</title>
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Minha Lista de Tarefas</h1>
+  <div>
+    <p> &#9702; clique selecionar uma tarefa </br>
+      &#9702; de double click para indicar tarefa completa </br>
+      &#9702; X &#10139; deleta tarefa selecionado </br>
+      &#9702; cima | baixo &#10139; move tarefa para cima/baixo </br>
+      &#9702; Limpar lista &#10139; remove todos as tarefas da lista </br>
+      &#9702; Limpar completos &#10139;remove somente as tarefas completas
+    </p>
+  </div>
+  <div>
+    <input type='text'>
+    <button class='adicionar'>Adicionar</button>
+  </div>
+  <div class='lista'></div>
+  <button onclick='deleteItem()' class='close'><i class='material-icons'>close</i></button>
+  <button onclick='up()' class='up'><i class='material-icons'>arrow_upward</i></button>
+  <button onclick='down()' class='down'><i class='material-icons'>arrow_downward</i></button>
+  <button onclick='deleteItems()' class='limpar-lista'>Limpar lista</button>
+  <button onclick='deleteCompletos()' class='limpar-completos'>Limpar completos</button>
+  <button onclick='salva()' class='salvar'>Salvar</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
