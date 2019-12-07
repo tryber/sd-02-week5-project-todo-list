@@ -44,6 +44,7 @@ button.salvar {
 
 p.item:hover {
   background: rgb( 201 , 201 , 201 );
+  cursor: pointer;
 }
 
 .gray {
