@@ -5,6 +5,7 @@ const botaoEnviar = document.querySelector('#botaoEnviar');
 let elementoAtual = document.querySelector('ol');
 
 function itemListaPreenchido() {
+  event.preventDefault()
   let novoElemento = document.createElement('li');
   novoElemento.className = "itemLista";
   novoElemento.innerText = textoFormulario.value;
@@ -17,7 +18,7 @@ function itemListaPreenchido() {
 botaoEnviar.addEventListener('click', itemListaPreenchido);
 
 
-//Apaga item selecionado
+//Apaga Tudo
 
 let apagarTudo = document.querySelector('#apagarTudo')
 
@@ -35,12 +36,28 @@ apagarTudo.onclick = () => {
 }
 
 
-//Apaga Selecionado
+//Apaga Riscado
 
-let apagarSelecionado = document.querySelector('#apagarSelecionado')
+let apagarSelecionado = document.querySelector('#apagarCompleto')
 
 apagarSelecionado.onclick = () => {
   limpaSelecionado = document.getElementsByClassName('riscado')
+  limpaSelecionado.length
+  if (limpaSelecionado.length >= 1) {
+    for (i = 0; i = limpaSelecionado.length; i++) {
+      limpaSelecionado[length].remove(i)
+    }
+  } else {
+    alert("Não há itens completos para apagar")
+  }
+}
+
+//Apaga Selecionado
+
+let apagarCompleto = document.querySelector('#apagarSelecionado')
+
+apagarCompleto.onclick = () => {
+  limpaSelecionado = document.getElementsByClassName('selecionado')
   limpaSelecionado.length
   if (limpaSelecionado.length >= 1) {
     for (i = 0; i = limpaSelecionado.length; i++) {
@@ -66,3 +83,4 @@ elementoAtual.addEventListener('click', function () {
   resultado = event.target
   resultado.classList.toggle("selecionado")
 })
+
