@@ -34,25 +34,13 @@ apagarTudo.onclick = () => {
   limpaTudo.length
 }
 
-//Seleciona item
-
-elementoAtual.addEventListener('click', function () {
-  resultado = event.target
-  
-  if (resultado.className == "itemLista"){
-    resultado.className = "itemLista selecionado"
-  } else {
-    resultado.className = "itemLista"
-  }
-
-})
 
 //Apaga Selecionado
 
 let apagarSelecionado = document.querySelector('#apagarSelecionado')
 
 apagarSelecionado.onclick = () => {
-  limpaSelecionado = document.getElementsByClassName('selecionado')
+  limpaSelecionado = document.getElementsByClassName('riscado')
   limpaSelecionado.length
   if (limpaSelecionado.length >= 1) {
     for (i = 0; i = limpaSelecionado.length; i++) {
@@ -67,13 +55,14 @@ apagarSelecionado.onclick = () => {
 //Double Click Risca Item
 
 elementoAtual.addEventListener('dblclick', function () {
-    resultado = event.target
-    console.log(resultado.classList.contains('itemLista'))
-    if (resultado.classList.contains('riscado')){
-        resultado.classList.remove("riscado")
-      } else {
-        resultado.classList.add('riscado')
-      }
-    
-  
-  })
+  resultado = event.target
+  resultado.classList.toggle("riscado")
+
+})
+
+//Seleciona item
+
+elementoAtual.addEventListener('click', function () {
+  resultado = event.target
+  resultado.classList.toggle("selecionado")
+})

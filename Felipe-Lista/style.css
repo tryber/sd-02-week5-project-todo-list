@@ -9,6 +9,15 @@ body {
     text-align: center;
 }
 
+h1:hover{
+    color: chartreuse;
+}
+
+header h1 {
+    font-size: 70px;
+    width: 400px;
+}
+
 li:hover{
     background-color: gray;
     color: rgb(95, 52, 52);
