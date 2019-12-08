@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto Lista de Tarefas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="flex-container">
+            <h1 class="flex-container">
+                <marquee>Lista de Tarefas</marquee>
+            </h1>
+        </div>
+    </header>
+    <div class="clear"></div>
+    <article>
+        <h2>Insira sua tarefa</h2>
+        <p>Clique em enviar para inserir a tarefa</p>
+            <form>
+                <label for="botaoEnviar" type="button">
+                    <input type="text" type="button" id="textoFormulario"></label>
+                <button id="botaoEnviar" class="botaoEnviar">Enviar</button>
+            </form>
+
+        <ol id="listaTarefas">
+        </ol>
+        <hr>
+        <section>
+            <h1>Configurações</h1>
+            <p>Selecione a tarefa e apague a mesma individualmente</p>
+            <p>Ou clique em Apagar Tudo e apague todas as tarefas</p>
+            <nav class="menuConfiguracao">
+                <button id="apagarCompleto" class="botao">Apagar Completos</button>
+                <button id="apagarTudo" class="botao">Apagar Tudo</button>
+                <button id="apagarSelecionado" class="botao">Apagar Selecionado</button>
+            </nav>
+        </section>
+    </article>
+    <br>
+    <div class="footer">
+        <footer>Lista de Tarefas Criada Por: Felipe Andrade Lima</footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
