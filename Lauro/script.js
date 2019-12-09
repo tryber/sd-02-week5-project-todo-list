@@ -1,14 +1,14 @@
 let tarefa;
 
-let moveCima = document.querySelector('#move-cima');
+const moveCima = document.querySelector('#move-cima');
 
-let moveBaixo = document.querySelector('#move-baixo');
+const moveBaixo = document.querySelector('#move-baixo');
 
-let criaTarefa = document.querySelector("#botao-tarefa");
+let criaTarefa = document.querySelector('#botao-tarefa');
 
-let removeTarefa = document.querySelector("#remove-tarefa");
+let removeTarefa = document.querySelector('#remove-tarefa');
 
-let removeCumprido = document.querySelector("#remove-cumpridos");
+let removeCumprido = document.querySelector('#remove-cumpridos');
 
 let digitaTexto = document.querySelector('#digita-texto');
 
@@ -16,10 +16,16 @@ let lista = document.querySelector('#tarefas');
 
 let tarefaAberta = document.querySelector('.tarefa-aberta');
 
+/* desabilita setas */
+function desabilitaSetas(x){
+  moveCima.disabled = x;
+  moveBaixo.disabled = x;
+}
+
 moveCima.onload = desabilitaSetas(true);
 moveBaixo.onload = desabilitaSetas(true);
 
-//adiciona a tarefa
+/* adiciona a tarefa */
 criaTarefa.addEventListener("click", adicionaTarefa)
 digitaTexto.addEventListener('keyup',function(event){
   if (event.keyCode === 13) {
@@ -31,11 +37,11 @@ function adicionaTarefa() {
   if (digitaTexto.value == 0){
     alert ('Por favor, digite uma tarefa.');
   }else{
-    let tarefa = document.createElement('div');
+    tarefa = document.createElement('div');
     tarefa.setAttribute ('class', 'tarefa-aberta');
     tarefa.innerHTML = digitaTexto.value;
     tarefas.appendChild(tarefa);
-    if(document.querySelectorAll('.tarefa-aberta').length >= 2) { 
+    if(document.querySelectorAll('.tarefa-aberta').length >= 2) {
       desabilitaSetas(false)
     }else{
       desabilitaSetas(true)
@@ -43,7 +49,7 @@ function adicionaTarefa() {
     digitaTexto.value=null;
   }};
 
-// //riscar item com duplo clique
+//riscar item com duplo clique
 lista.addEventListener('dblclick', function(event){
     event.target.classList.toggle('cumprido');
     event.target.classList.remove('clicada')
@@ -70,12 +76,6 @@ moveCima.addEventListener('click', function(clicada){
   }
 })
 
-//desabilita setas
-function desabilitaSetas(x){
-  moveCima.disabled = x;
-  moveBaixo.disabled = x;
-}
-
 //move tarefas pra baixo
 moveBaixo.addEventListener('click', function(clicada){
   clicada = document.querySelector('.clicada');
@@ -84,7 +84,7 @@ moveBaixo.addEventListener('click', function(clicada){
   }
 })
 
-//apaga todas as tarefas
+/* apaga todas as tarefas */
 removeTarefa.addEventListener("click", function() {
   if (document.querySelectorAll('.tarefa-aberta').length == 0){
     alert ('A sua lista está vazia.');
@@ -96,7 +96,7 @@ removeTarefa.addEventListener("click", function() {
       desabilitaSetas(true);
   }})
 
-//apaga só as cumpridas
+/* apaga só as cumpridas */
 removeCumprido.addEventListener("click", function() {
   if (tamanhoLista = document.querySelectorAll('.cumprido').length == 0){
     alert ('Não há tarefas cumpridas');
