@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<title>Lauro's Tarefas Organizator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="background-image" role="img" aria-label='Photo by ASHLEY EDWARDS on Unsplash'></div>
+<h1>Bem vindo à Lista de Tarefas!</h1>
+<section id = 'esquerda'>
+  <h2>Digite.<br>Adicione.<br>Produza.</h2>
+  <input type="text" id='digita-texto'>
+  <button id="botao-tarefa">Adicionar</button>
+</section>
+<section id = 'direita'>
+  <p id="funcao-setas">Para alterar a ordem das tarefas que deseja cumprir, clique nas setas que aparecerão na tela.<br>
+  Para marcar um item como cumprido, dê dois cliques nele.</p>
+  <button id="move-cima"><strong>↑</strong></button>
+  <button id="move-baixo"><strong>↓</strong></button>
+    <div id="tarefas"></div>
+  <br>
+  <button id="remove-tarefa">Remover tudo</button>
+  <button id="remove-cumpridos">Remover cumpridos</button>
+</section>
+</body>
+<script src="script.js"></script>
+</html>

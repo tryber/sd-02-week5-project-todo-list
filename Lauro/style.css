@@ -1,0 +1,72 @@
+body{
+  background-image:url(ashley-edwards-zwmkMkJ2Qi4-unsplash.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  overflow:auto;
+  font-family: 'Solway', serif;
+}
+h1{
+  text-align: center;
+}
+#esquerda{
+  margin-left: 180px;
+  margin-top: 100px;
+  vertical-align: top;
+}
+#direita{
+  margin-left:180px;
+}
+#digita-texto{
+  background: transparent;
+  width: 300px;
+  padding-left:5px;
+}
+#tarefas{
+  margin-top: 20px;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 440px;
+  min-height: 20px;
+  max-height: 120px;
+  overflow:auto;
+
+}
+.tarefa-aberta{
+  line-height: 20px;
+  word-break: normal;
+  border: 1px gray;
+  border-top-style: dotted;
+  padding-left: 5px;
+}
+.tarefa-aberta:hover{
+  background-color: #ffff99;
+}
+.clicada{
+  background-color:#ffff99;
+}
+#funcao-setas{
+  font-size: 10px;
+}
+button{
+  background-color: #454545;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  font-family: 'Solway', serif;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:disabled{
+  background-color: #D8D6D9;
+}
+.cumprido{
+  text-decoration: line-through;
+  background-color:#454545;
+  opacity:0.5;
+}
