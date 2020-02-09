@@ -66,7 +66,43 @@ it('verifica botão que remove completos', function(){
     cy.get('li').contains('oi2')
 })
 
+it('move li para cima', function(){
+    cy.get('input').type("oi1")
+    cy.get('button#criar').click(); 
+    cy.get('input').type("oi2")
+    cy.get('button#criar').click();     
+    cy.get('input').type("oi3")
+    cy.get('button#criar').click();
+    cy.get('li:last-child').click()
+    cy.get('button#mover-cima').click()
+    cy.get('button#mover-cima').click()
+    cy.get('li:first-child').contains('oi3')
+})
 
+it('move li para cima', function(){
+    cy.get('input').type("oi1")
+    cy.get('button#criar').click(); 
+    cy.get('input').type("oi2")
+    cy.get('button#criar').click();     
+    cy.get('input').type("oi3")
+    cy.get('button#criar').click();
+    cy.get('li:first-child').click()
+    cy.get('button#mover-baixo').click()
+    cy.get('button#mover-baixo').click()
+    cy.get('li:last-child').contains('oi1')
+})
+
+it('remove selecionado', function(){
+    cy.get('input').type("oi1")
+    cy.get('button#criar').click(); 
+    cy.get('input').type("oi2")
+    cy.get('button#criar').click();     
+    cy.get('input').type("oi3")
+    cy.get('button#criar').click();
+    cy.get('li:first-child').click()
+    cy.get('button#remove-selecionado').click()
+    cy.get('li:first-child').contains('oi2')
+})
 
 //     it('verifica a cor do body', function(){
 //       cy.get('body').should('not.have.css', 'backgroundColor', 'rgb(255, 255, 255)')
