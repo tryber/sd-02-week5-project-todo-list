@@ -53,7 +53,7 @@ it('testar seleção', function(){
 })
 
 
-it('testar seleção', function(){
+it('verifica botão que remove completos', function(){
     cy.get('input').type("oi1")
     cy.get('button#criar').click(); 
     cy.get('input').type("oi2")
@@ -65,6 +65,8 @@ it('testar seleção', function(){
     cy.get('button#remove-completos').click()
     cy.get('li').contains('oi2')
 })
+
+
 
 //     it('verifica a cor do body', function(){
 //       cy.get('body').should('not.have.css', 'backgroundColor', 'rgb(255, 255, 255)')
